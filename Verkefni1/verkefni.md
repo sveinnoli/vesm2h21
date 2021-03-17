@@ -1,7 +1,7 @@
 #### DHT11 og serial monitor (3%)
 1. Útskýrðu með eigin orðum hvernig rakinn er mældur.    
     - DHT11 reiknar hlutfallslegan rakastig með því að mæla rafmótstöðu milli tveggja rafskauta.
-      Rakskynjunarþáttur DHT11 er undirlag sem gefur raka og rafskautin borin á yfirborðið. Þegar vatnsgufa frásogast af undirlaginu losna jónir af undirlaginu sem eykur leiðni       milli rafskautanna. Breyting á viðnámi rafskautanna tveggja er í réttu hlutfalli við hlutfallslegan raka. Hærri rakastig minnkar viðnám milli rafskautanna en lægra               rakastig eykur viðnám rafskautanna.
+      Rakskynjunarþáttur DHT11 er undirlag sem gefur raka og rafskautin borin á yfirborðið. Þegar vatnsgufa frásogast af undirlaginu losna ions af undirlaginu sem eykur leiðni         milli rafskautanna. Breyting á viðnámi rafskautanna tveggja er í réttu hlutfalli við hlutfallslegan raka. Hærri rakastig minnkar viðnám milli rafskautanna en lægra               rakastig eykur viðnám rafskautanna.
 
 DHT11 breytir viðnámsmælingunni í hlutfallslegan raka á flögu sem er festur aftan á einingunni og sendir rakastig og hitamælingu beint til Arduino Nano.
 1. Settu upp fyrri rásina í greininni (það á ekki að setja upp rásina með LCD skjánum).
