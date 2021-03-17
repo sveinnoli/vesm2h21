@@ -1,4 +1,8 @@
 #### DHT11 og serial monitor (3%)
+1. Útskýrðu með eigin orðum hvernig rakinn er mældur.
+    - Vantar
+1. Settu upp fyrri rásina í greininni (það á ekki að setja upp rásina með LCD skjánum).
+    - Bæta við myndbandi af rásini
 
 #### 7-Segment ein tala (3%)
 
