@@ -6,7 +6,7 @@
 1. Settu upp fyrri rásina í greininni (það á ekki að setja upp rásina með LCD skjánum).
     > [Myndband af virkni](https://youtu.be/zTZluUC8H4Q)
     > 
-    > [Kóði]()
+    > [Kóði - Vantar]()
 
 #### 7-Segment ein tala (3%)
 1. Hvort er þitt 7-Segment Display common anode eða common cathode og hver er munurinn á þessu tvennu?
