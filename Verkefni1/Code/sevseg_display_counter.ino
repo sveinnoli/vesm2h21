@@ -21,7 +21,7 @@ void setup()
 }
 
 
-long lastCount = 0;  // the last time the output pin was toggled
+long lastCount = 0; 
 long counterDelay = 2000; 
 int lastDigit = 0;
 
