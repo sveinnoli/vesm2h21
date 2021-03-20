@@ -10,7 +10,7 @@
 
 #### 7-Segment ein tala (3%)
 1. Hvort er þitt 7-Segment Display common anode eða common cathode og hver er munurinn á þessu tvennu?
-    - Mitt 7 segment display(5011AS) er common cathode. munurinn milli common cathode og common anode er að í common cathode eru öll cathodinn á LEDonum tengd saman. En í common       anode eru öll anodes tengd saman í displayinu. 
+    - Mitt 7 segment display(5011AS) er common cathode. munurinn milli common cathode og common anode er að í common cathode(-) eru að öll cathodinn á LEDonum eru tengd saman.         En í common anode(+) eru að öll anodes eru tengd saman í displayinu. 
 1. Í greininni er sýnd útfærsla á teljara. Settu teljarann upp á brauðbretti og settu kóðann á Arduino tölvuna þína.
     - [Myndband af virkni](https://youtu.be/AnbcqrnWTcg)
 1. Þú veist að loop fallið er lykkja en í kóðadæminu er eina sem er í fallinu for lykkja. Breyttu útfærslunni á fallinu þannig að það þurfi ekki að nota "auka" lykkju.
