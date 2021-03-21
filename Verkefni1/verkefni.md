@@ -20,6 +20,7 @@
     - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni1/Code/sevseg_display_dice.ino)
 
 #### 7-Segment fjórar tölur (3%)
+Kynntu þér hvernig 7-Segment með fjórum tölustöfum virkar með því að lesa seinni hluta [þessarar greinar](https://www.circuitbasics.com/arduino-7-segment-display-tutorial/) (kaflinn *4 DIGIT 7-SEGMENT DISPLAYS*). Skoðaðu einnig stillingar og aðgerðir í [SevSeg safninu](https://github.com/DeanIsMe/SevSeg)
 1. Settu upp fyrri rásina (sem birtir 4999) ekki á að setja upp seinni rásina.
 1. Bættu inn í ```loop``` fallið einni ```delay``` skipun. Prófaðu að hafa ```delay``` í eina sekúndu (1000 ms) og svaraðu svo eftirfarandi spurningum.
    1. Hvað gerist?
