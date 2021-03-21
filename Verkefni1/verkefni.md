@@ -16,7 +16,8 @@
 1. Þú veist að loop fallið er lykkja en í kóðadæminu er eina sem er í fallinu for lykkja. Breyttu útfærslunni á fallinu þannig að það þurfi ekki að nota "auka" lykkju.
     - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni1/Code/sevseg_display_counter.ino)
 1. Útfærðu teninginn sem er neðst í greininni en breyttu útfærslunni þannig að þú þurfir ekki "pullup" viðnámið heldur sé það leyst í kóða. Bættu líka við "debounce" á takkann.
-    - Vantar
+    - [Myndband af virkni](https://www.youtube.com/watch?v=gMiIXZqqqkk&ab_channel=Icgxstriker)
+    - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni1/Code/sevseg_display_dice.ino)
 
 #### 7-Segment fjórar tölur (3%)
 1. Settu upp fyrri rásina (sem birtir 4999) ekki á að setja upp seinni rásina.
