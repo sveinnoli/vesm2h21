@@ -24,9 +24,9 @@ Kynntu þér hvernig 7-Segment með fjórum tölustöfum virkar með því að l
 1. Settu upp fyrri rásina (sem birtir 4999) ekki á að setja upp seinni rásina.
 1. Bættu inn í ```loop``` fallið einni ```delay``` skipun. Prófaðu að hafa ```delay``` í eina sekúndu (1000 ms) og svaraðu svo eftirfarandi spurningum.
    1. Hvað gerist?
-        - Vantar
+        - Það birtir eina tölu í einu frá vinstri til hægri.
    1. Af hverju gerist það?
-        - Vantar
+        - Þegar forritið keyrist þá byrjar það að kveikja á díoðunum sem eru í seven segmen displayinu. Það gerir það eitt í einu. Að bæta við delay fallið veldur því vandamál             að forritið lýsur up einu tölu en stopar svo í eina sekondu og slökkvir á fyrirverandi ljósinu og kveikjir á því næsta og byrjar að telja aftur. og þar sem arduino er           með 16mhz tíðni(16 milljón leiðbeningar á sekundu) er ekki hægt að taka eftir því að tölurnar slökkvist þegar delay fallið er ekki í kóðanum.
 #### 7-Segment 4 tölustafir með dht11 og takka. (5%)
 1. Settu upp rás sem getur mælt hita og rakastig og birt það á 4 tölustafa 7-Segment skjá. Það þarf að vera hægt að skipta á milli þess hvort skjárinn sýnir hita eða raka stig með takka.
     - Vantar
