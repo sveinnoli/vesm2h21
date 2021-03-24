@@ -33,9 +33,6 @@
     - [Myndband](https://youtu.be/i0epgOb2OI8)
     - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni2/Code/LCD.ino)
  
- 
-
-![lcd nafn](https://raw.githubusercontent.com/VESM2VT/Efni/main/Myndir/lcd_verkefni2.gif)
 
 ---
 
