@@ -17,7 +17,7 @@
 1. Tengdu HC-SR04 við Arduino Uno og skoðaðu eftirfarandi [kóðasbút](https://github.com/VESM2VT/Efni/blob/main/Kodi/sonic.ino). Bættu við kóðann eftirfarandi:
    1. hann birtir fjarlægðir í cm í Serial monitor.
    2. ef fjarlægð er meiri en 4 metrar þá prentast á Serial monitor "Out of range". 
-       - [Myndband af virkni](https://youtu.be/PcNb6rW-j2o)
+       - [Myndband af virkni](https://youtu.be/d8JXmF1WAME)
        - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni2/Code/sonic_sensor.ino)
    
    
