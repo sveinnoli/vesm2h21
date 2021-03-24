@@ -1,10 +1,5 @@
 ## Verkefni 2
 
-- Settu upp verklega með brauðbretti og íhlutum
-- Svaraðu spurningum þar sem það á við.
-
----
-
 #### 1. Að vinna með hliðræn gildi (4%)
 
 1. Notaðu [LDR](https://create.arduino.cc/projecthub/tarantula3/using-an-ldr-sensor-with-arduino-807b1c) ljósnema til að stýra birtustigi og litum á [RGB LED](https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/overview). Þegar það verður minni birta í umhverfinu þá eykst birtan smám saman (fade in) á RGB LED á móti með mismunandi litablæbrigðum og svo öfugt þegar birtan eykst í umhverfinu.
