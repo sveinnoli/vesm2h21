@@ -7,7 +7,7 @@
         - Duty cycle í pwm er brot af hve oft það er verið að senda rafmagn á moti hvenar er ekki verið að senda rafmagn. Það er líka brot af heildar rafmagninu sem er verið að           senda. t.d. ef það er duty cycle af 90% og er verið að senda 5V þá er verið að senda 4.5V. 5V*0.9 = 4.5V þar sem 0.9 er prósentar eining af duty cycle.
     1. Afhverju skilar analogRead() heiltölu á bilinu 0-1023?
         - Fallið skilar voltum milli 0 til 5 og það gerir það með tölu sem er 10 bit integer. Hæðsta tala sem 10 bit tala kemst í er 1023 og lægsta 0 sem er 1024 tölur.
-    - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni2/Code/RGB_LED_HEX.ino);
+    - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni2/Code/RGB_LED_HEX.ino)
     - [Myndband af virkni](https://youtu.be/MHK1dHWkINs)
        
 ---
