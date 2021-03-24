@@ -16,6 +16,7 @@
 #### 2. HC-SR04 Ultrasonic Sensor (4%)
 1. Kynntu þér hvernig HC-SR04 Ultrasonic Sensor virkar með því að lesa [þessa grein](https://lastminuteengineers.com/arduino-sr04-ultrasonic-sensor-tutorial/). 
     1. Hversu nákvæmar eru mælingarnar með Ultrasonic Sensor?
+        - Það er með 3mm mákvæmi.
 1. Tengdu HC-SR04 við Arduino Uno og skoðaðu eftirfarandi [kóðasbút](https://github.com/VESM2VT/Efni/blob/main/Kodi/sonic.ino). Bættu við kóðann eftirfarandi:
    1. hann birtir fjarlægðir í cm í Serial monitor.
    2. ef fjarlægð er meiri en 4 metrar þá prentast á Serial monitor "Out of range". 
