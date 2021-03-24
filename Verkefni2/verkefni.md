@@ -22,6 +22,7 @@
    1. hann birtir fjarlægðir í cm í Serial monitor.
    2. ef fjarlægð er meiri en 4 metrar þá prentast á Serial monitor "Out of range". 
        - [Myndband af virkni](https://youtu.be/PcNb6rW-j2o)
+       - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/Verkefni2/Code/sonic_sensor.ino)
    
    
 ---
