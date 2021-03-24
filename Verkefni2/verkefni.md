@@ -48,3 +48,6 @@
 
 1. Fylgdu eftir [Contactless Distance Finder + LCD + LCDBarGraph](https://lastminuteengineers.com/arduino-sr04-ultrasonic-sensor-tutorial/#arduino-project-contactless-distance-finder) og settu upp verklega.
    1. Hvernig getur hitastig og raki úti haft áhrif á fjarlægðarmælingar með HC-SR04?
+        - HC-SR04 mælir fjarlægð með hljóðbylgjum sem er á hraða hljóði. Samkvæmt þessa formúlu Speed of sound m/s = 331.4 + (0.606 * Temp) + (0.0124 * Humidity)
+          hefur hitastig og rakastig áhrif á hraðan á hljóðinu sem getur valdið delay á hvenar bylgjurnar koma til baka til að geta mæld fjarlægð. Það er hægt að hafa góðan raka           og hitamælir til að setja í þessar formúlur sem er með lítið skeggjumark til að koma við að reikningurinn er nákvæmur.
+        
