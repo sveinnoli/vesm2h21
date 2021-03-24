@@ -15,7 +15,6 @@ void setup()
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);  
   pinMode(ldrPin, INPUT);
-  Serial.begin(9600);
 }
  
 void loop()
@@ -26,7 +25,6 @@ void loop()
     ldrPercentage = 1; 
   }
   rgbBrightness = 255*ldrPercentage;
-  Serial.print("\n");
   setColor(rgbBrightness, rgbBrightness, rgbBrightness);  // red
   delay(1000);
   
