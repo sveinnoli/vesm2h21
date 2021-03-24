@@ -10,6 +10,7 @@
 1. Notaðu [LDR](https://create.arduino.cc/projecthub/tarantula3/using-an-ldr-sensor-with-arduino-807b1c) ljósnema til að stýra birtustigi og litum á [RGB LED](https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/overview). Þegar það verður minni birta í umhverfinu þá eykst birtan smám saman (fade in) á RGB LED á móti með mismunandi litablæbrigðum og svo öfugt þegar birtan eykst í umhverfinu.
     1. Hvað er átt við með *duty cycle* í PWM? 
     1. Afhverju skilar analogRead() heiltölu á bilinu 0-1023?
+        - Fallið skilar voltum milli 0 til 5 og það gerir það með tölu sem er 10 bit integer. Hæðsta tala sem 10 bit tala kemst í er 1023 og lægsta 0 sem er 1024 tölur.
        
 ---
 
