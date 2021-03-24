@@ -25,7 +25,7 @@ void loop()
     ldrPercentage = 1; 
   }
   rgbBrightness = 255*ldrPercentage;
-  setColor(rgbBrightness, rgbBrightness, rgbBrightness);  // red
+  setColor(rgbBrightness, rgbBrightness, rgbBrightness);  
   delay(1000);
   
 }
