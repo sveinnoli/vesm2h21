@@ -30,6 +30,7 @@
 #### 3. LCD (4%)
 1. Kynntu þér hvernig 16×2 Character LCD virkar með því að lesa [þessa grein](https://lastminuteengineers.com/arduino-1602-character-lcd-tutorial/) og svaraðu eftirfarandi spurningum:
    1. Afhverju er R/W tengt í GND?
+        - Ef það er tengt í GND framkvæmir það einungis Write ef það kemur rafmagn í R/W framkvæmir það Read.
    1. Ahverju þarf að stýra LCD1602 með nokkrum pinnum (4 eða 8) á sama tíma? útskýrðu!
 1. Settu upp [Halló heimur](https://lastminuteengineers.com/arduino-1602-character-lcd-tutorial/#arduino-code) en breyttu kóðanum þannig að nafnið þitt birtist í efri línunni á skjánum, einn stafur í einu. Í neðri línunni á að standa Tolvubraut. Skoðaðu aðferðir í [LiquidCrystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal).
  
