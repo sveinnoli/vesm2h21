@@ -4,6 +4,7 @@
 
 
 ### Þráðlaus fjarstýring fyrir bíl (10%)
+Hannaðu fjarstýringu fyrir bílinn sem við eigum eftir að setja saman. Notaðu forrit t.d. TinkerCad (og 360 Fusion) fyrir 3D prentun. Fjarstýring þarf að vera **rúnuð**, falla vel að hendi eða höndum og rými þarf að vera vel skipulagt. Sýnidæmi [Gamepad](https://www.youtube.com/watch?v=JCrsFxdJXu8), [Nunchuck](https://en.wikipedia.org/wiki/Wii_Remote#Nunchuk), [hýsing fyrir stýripinna](https://www.thingiverse.com/thing:1162200).
 
 #### Íhlutir sem þurfa að vera í fjarstýringunni:
 - [Arduino Nano](https://www.arduino.cc/en/pmwiki.php?n=Main/ArduinoBoardNano)
