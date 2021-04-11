@@ -16,4 +16,4 @@ Ef það er of mikið að 3d printa allt þetta í einu skjali gerði ég stl sk
 
 
 ### Auka atriði
-Ég gerði aðra fjarstýringuna [hérna](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni3/CONTROLLER_BACKUP/Nintendo_controller_case.stl) ef hinn fjarstýringinn var of rúnuð til að geta verið prentuð. Aðeins nota þetta skjal ef það kemur upp á
+Ég gerði aðra fjarstýringuna [hérna](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni3/CONTROLLER_BACKUP/Nintendo_controller_case.stl) ef hinn fjarstýringinn var of rúnuð til að geta verið prentuð. Aðeins nota þetta skjal ef það kemur upp
