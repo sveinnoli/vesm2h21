@@ -12,8 +12,11 @@
 
 ## 4.2 Servo Motors (2%)
 - [Hlekkur á kóða - Sweep](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/Code/Sweep.ino)
+
 ![Servo_SWEEP](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/myndir/Servo.jpg)
+
 - [Hlekkur á kóða - Potentiometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/Code/potentometer.ino)
+
 ![Servo_potentometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/myndir/Servo_potento.jpg)
 
 1. Afhverju er heppilegt að nota rafþéttir með servo motor?
@@ -24,8 +27,9 @@
 ---
 
 ## 4.3. DC Motors (1%)
-![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
 - [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/tree/main/verkefni4/4.3_DC_Motors/code)
+
+![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
 
 1. Afhverju þurfum við að nota PWM pinna til að stýra DC mótor?
    - Svar: PWM skilar gildi milli 0-1023 sem getur verið notað sem prósentar eining til að stjórna hraða mótorsins.
