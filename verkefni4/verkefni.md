@@ -1,7 +1,8 @@
 ## 4.1 Rafþéttar og tranistorar (1%)
 
 1. Hver er munurinn á rafhlöðu og rafþétti?
-    - Rafhlaða geymir rafmagnið sitt efnisfræðilega og gefur út stöðugt voltage meðan capacitor tekur rafmagn frá rafrás og geymir rafmagnið ef of mikið er að koma í gegn og hleypur rafmagn í gegn ef of lítið rafmagn er að fara í gegn til að gefa hreynan straum.
+    - Rafhlaða geymir rafmagnið sitt efnisfræðilega og gefur út stöðugt voltage og getur geymt talsvert meira rafmagn en capacitor.
+      meðan capacitor tekur rafmagn frá rafrás og geymir rafmagnið ef of mikið er að koma í gegn og hleypur rafmagn í gegn ef of lítið rafmagn er að fara í gegn til að                 gefa hreynan straum en getur ekki geymt mikið rafmagn í einu án rafrás.
 1. Hvað gerir transistor?
    - Svar:
 2. Hvað heita lappirnar á transistor?
