@@ -59,9 +59,9 @@
 
 ## 4.5. DC motor reversing (2%)
 
-[Hlekkur á myndband]()
+[Hlekkur á myndband](https://youtu.be/fMw-L9e_4-E)
 
-[Hlekkur á kóða]()
+[Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.5_Motor_reversing/Motor_reverse.ino)
 
 1. Hvað gerir kóðinn?
     - Svar:
