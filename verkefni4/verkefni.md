@@ -51,9 +51,9 @@
 ## 4.4. H-Bridge (1%)
 
 1. Hvað er hægt að gera með L293D?
-   - Svar:
+   - Svar: Þar sem L293D er Motor driver sem getur outputtað milli 5-36V, það er hægt að tengja það við micro controller eins og Arduino og tengja það svo við Motor og nota                controllerin til að stjórna Voltage ouput í mótorinn til að geta stjórnað hraðanum á mótorinum, L293D er mjög æskilegt í því að það kemur við að það þarfnast ekki                díoður og ýmsar varnir þannig að mótorinn eyðileggur ekki Micro controllerinn
 2. Hver er munurinn á L293 or L293D?
-   - Svar:
+   - Svar: L293 er ekki með inbyggða Díoðu en L293D er með inbyggða díoðu. en L293 getur outputað current up að 1A en L293D getur einungis outputtað 600mA og L293 output ræður              við 2A en L293D getur aðeins rætt við 1.2A í outputtinu.
 
 ---
 
