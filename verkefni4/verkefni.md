@@ -40,7 +40,10 @@
         - Viðnámið er tengd við pwm pinna og base pinnan á transitorinum sem stjórnar hvort transistorinn er opinn eða lokaður til að stjórna flæði rafmagns í rafrásinni
 
 3. Hvernig er stýrimótor (e. servo motor) ólíkur hefðbundnum DC mótor?
-   - Svar: 
+   - Svar:  
+        - Servo er með þrjá víra Power, Ground, Control en DC er aðeins með Power og Ground
+        - Servo mótorinn getur aðeins snúið 180° en dc motorinn getur snúið endalaust 
+        - Servo er oft notað fyrir robot hendi og hluti sem þarf að snúa nákvæmlega en hægt og dc er notað fyrir hluti sem þurfa mikla snúníngu
 
 ---
 
