@@ -28,7 +28,7 @@
 ---
 
 ## 4.3. DC Motors (1%)
-- [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/tree/main/verkefni4/4.3_DC_Motors/code)
+- [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/code/Dc_motor.ino)
 
 ![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
 
