@@ -21,9 +21,9 @@
 ![Servo_potentometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/myndir/Servo_potento.jpg)
 
 1. Afhverju er heppilegt að nota rafþéttir með servo motor?
-    - Svar:
+    - Svar: til að vernda arduinoið, þar sem servo motorinn getur dragið mjög mikið rafmagn í einu þegar það er verið að t.d. ræsa arduinoinu eða tengja það í usb með mótorinn               tengdann. Ef það er ekki rafþéttir tengd á milli þá getur það valdið að arduinoið resettar.
 2. Hvað snýst servo motor margar gráður þegar hár púls (e. pulse) varir í 1.5 millisekúndur?
-    - Svar:
+    - Svar: Það snýst 90°
 
 ---
 
