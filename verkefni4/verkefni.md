@@ -1,7 +1,3 @@
-# Verkefni 4 - Svarblað
-
-Smelltu á Raw hér fyrir ofan og afritaðu svo textann í wiki síðuna þína fyrir verkefni 4.
-
 ## 4.1 Rafþéttar og tranistorar (1%)
 
 1. Hver er munurinn á rafhlöðu og rafþétti?
