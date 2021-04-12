@@ -65,6 +65,7 @@
 
 
 1. Hvað gerir kóðinn?
+
         ```cpp
         void setMotor(int speed, boolean reverse) {
             analogWrite(enablePin, speed);
@@ -72,6 +73,7 @@
             digitalWrite(in2Pin, reverse);
         }
         ```
+
     - Svar:
 1. L293D er með tvo +V pinna (8 and 16), útskýrðu þá.
     - Svar:
