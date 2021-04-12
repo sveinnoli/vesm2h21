@@ -25,9 +25,10 @@
 ---
 
 ## 4.3. DC Motors (1%)
-
-- [Hlekkur á myndband]()
-- [Hlekkur á kóða]()
+![Servo](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/Servo.jpg)
+![Servo_potentometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/Servo_potento.jpg)
+![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
+- [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/tree/main/verkefni4/4.3_DC_Motors/code)
 
 1. Afhverju þurfum við að nota PWM pinna til að stýra DC mótor?
    - Svar: PWM skilar gildi milli 0-1023 sem getur verið notað sem prósentar eining til að stjórna hraða mótorsins.
