@@ -33,7 +33,7 @@
 ![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
 
 1. Afhverju þurfum við að nota PWM pinna til að stýra DC mótor?
-   - Svar: PWM skilar gildi milli 0-1023 sem getur verið notað sem prósentar eining til að stjórna hraða mótorsins.
+   - Svar: PWM skilar 10bita gildi sem er milli 0-1023 sem getur verið notað sem prósentar eining til að stjórna hraða mótorsins.
 2. Afhverju þurfum við að nota viðnám, transistor og diode með DC mótor í _Lesson 13. DC Motors_?
    - Svar: 
         - Transistorinn kemur við að við skemmum ekki digital pinana á arduinoinu þar sem það getur tekin inn smá rafmagn frá digital pinonum og svo gefið mótorinum mikið                  rafmagn í einu. Það stjórnar líka hvort rafmagn getur farið á milli pinnana "Collector" og "Emitter" ef það er smá rafmagn að fara í base connectionið.
