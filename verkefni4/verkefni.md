@@ -32,9 +32,12 @@
 1. Afhverju þurfum við að nota PWM pinna til að stýra DC mótor?
    - Svar: PWM skilar gildi milli 0-1023 sem getur verið notað sem prósentar eining til að stjórna hraða mótorsins.
 2. Afhverju þurfum við að nota viðnám, transistor og diode með DC mótor í _Lesson 13. DC Motors_?
-   - Svar: Transistorinn kemur við að við skemmum ekki digital pinana á arduinoinu þar sem það getur tekin inn smá rafmagn frá digital pinonum og svo gefið mótorinum mikið                  rafmagn í einu. Það stjórnar líka hvort rafmagn getur farið á milli pinnana "Collector" og "Emitter" ef það er smá rafmagn að fara í base connectionið.
-           Diode er notuð til að stjórna rafmagnsflæði þar sem það leyfur einungis rafmagn að flæða í eina átt. Þegar er slökkt á mótorinum gefur það mikið neikvætt                        rafmagnsflæði sem getur skemmt arduinoið, þetta kemur við að arduinoið er ekki eyðilagt.
-           Viðnámið er tengd við pwm pinna og base pinnan á transitorinum sem stjórnar hvort transistorinn er opinn eða lokaður til að stjórna flæði rafmagns í rafrásinni
+   - Svar: - Transistorinn kemur við að við skemmum ekki digital pinana á arduinoinu þar sem það getur tekin inn smá rafmagn frá digital pinonum og svo gefið mótorinum mikið                  rafmagn í einu. Það stjórnar líka hvort rafmagn getur farið á milli pinnana "Collector" og "Emitter" ef það er smá rafmagn að fara í base connectionið.
+
+           - Diode er notuð til að stjórna rafmagnsflæði þar sem það leyfur einungis rafmagn að flæða í eina átt. Þegar er slökkt á mótorinum gefur það mikið neikvætt                        rafmagnsflæði sem getur skemmt arduinoið, þetta kemur við að arduinoið er ekki eyðilagt.
+
+           - Viðnámið er tengd við pwm pinna og base pinnan á transitorinum sem stjórnar hvort transistorinn er opinn eða lokaður til að stjórna flæði rafmagns í rafrásinni
+
 3. Hvernig er stýrimótor (e. servo motor) ólíkur hefðbundnum DC mótor?
    - Svar: 
 
