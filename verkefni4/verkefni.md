@@ -11,11 +11,10 @@
 ---
 
 ## 4.2 Servo Motors (2%)
-
-- [Hlekkur á myndband - Sweep]()
-- [Hlekkur á kóða - Sweep]()
-- [Hlekkur á myndband - Potentiometer]()
-- [Hlekkur á kóða - Potentiometer]()
+- [Hlekkur á kóða - Sweep](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/Code/Sweep.ino)
+![Servo_SWEEP](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/myndir/Servo.jpg)
+- [Hlekkur á kóða - Potentiometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/Code/potentometer.ino)
+![Servo_potentometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.2_Servo_motor/myndir/Servo_potento.jpg)
 
 1. Afhverju er heppilegt að nota rafþéttir með servo motor?
     - Svar:
@@ -25,8 +24,6 @@
 ---
 
 ## 4.3. DC Motors (1%)
-![Servo](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/Servo.jpg)
-![Servo_potentometer](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/Servo_potento.jpg)
 ![DC_Motor](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.3_DC_Motors/DC_motor.jpg)
 - [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/tree/main/verkefni4/4.3_DC_Motors/code)
 
