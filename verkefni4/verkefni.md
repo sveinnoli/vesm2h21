@@ -4,9 +4,10 @@
     - Rafhlaða geymir rafmagnið sitt efnisfræðilega og gefur út stöðugt voltage og getur geymt talsvert meira rafmagn en capacitor.
       meðan capacitor tekur rafmagn frá rafrás og geymir rafmagnið ef of mikið er að koma í gegn og hleypur rafmagn í gegn ef of lítið rafmagn er að fara í gegn til að                 gefa hreynan straum sem gefur alltaf sama straum en getur ekki geymt mikið rafmagn í einu..
 1. Hvað gerir transistor?
-   - Svar:
+   - Svar: Það hleypur rafmagn í gegn ef Base pinnin er að fá smá rafmagn í sig, annars er rafrásinn sem transistor er tengdur við milli Collector og Emitter lokaður.
+     Hann er mjög svipaður og takki sem hleypur straum í gegn ef er ýtt á takkan.
 2. Hvað heita lappirnar á transistor?
-   - Svar:
+   - Svar: Collector, Base og Emitter
 
 ---
 
