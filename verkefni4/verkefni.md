@@ -75,5 +75,5 @@
     ```
     - Svar: Þetta er fall sem tekur inn tvær breytur, Speed sem er 8 bita tala fyrir hraðan á motorinum og Reverse sem er Bool sem er notað til að stjórna áttini sem mótorinn         snýr, það skrifar svo hraðan í motorinum með analogWrite. svo skrifar það bool í inpin1 og 2 til að stjórna áttini sem mótorinn snýr, inpin1 tekur anstæði af því gildi sem       reverse breytan skilar. 
 1. L293D er með tvo +V pinna (8 and 16), útskýrðu þá.
-    - Svar:
+    - Svar: pinni 16 er fyrir L293D driverinn sem skilar 5V og pinni 8 er fyrir mótorinn sem skilar 12V
 
