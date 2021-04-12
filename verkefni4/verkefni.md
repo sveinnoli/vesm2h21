@@ -63,14 +63,15 @@
 
 [Hlekkur á kóða](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni4/4.5_Motor_reversing/Motor_reverse.ino)
 
-```cpp
+
+1. Hvað gerir kóðinn?
+        ```cpp
         void setMotor(int speed, boolean reverse) {
             analogWrite(enablePin, speed);
             digitalWrite(in1Pin, !reverse);
             digitalWrite(in2Pin, reverse);
         }
         ```
-1. Hvað gerir kóðinn?
     - Svar:
 1. L293D er með tvo +V pinna (8 and 16), útskýrðu þá.
     - Svar:
