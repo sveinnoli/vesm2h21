@@ -36,6 +36,8 @@ Settu upp á Breadboard með Arduino Uno og [Nano](https://www.arduino.cc/en/pmw
    - [Kóði - Slave](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_2-3_ardu_comm_btn_lights/Slave_SPI/Slave_SPI.ino)
 1. Bættu við öðrum takka og led, sjá [uppsetningu](https://raw.githubusercontent.com/VESM3/V21/master/Myndir/SPI.png)  þannig að hægt sé að eiga samskipti í báðar áttir með tökkum. Sjá [kóða](https://gist.github.com/gestskoli/d2069beb5c4d0cf7c9351d75dfc3e2b0) og [Communication between two Arduino Boards](https://circuitdigest.com/microcontroller-projects/arduino-spi-communication-tutorial) 
    - [Myndband af virkni](https://youtu.be/w2A9PUIwKpY)
+   - [Kóði - Master](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_2-3_ardu_comm_btn_lights/Master_SPI/Master_SPI.ino)
+   - [Kóði - Slave](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_2-3_ardu_comm_btn_lights/Slave_SPI/Slave_SPI.ino)
 <!-- 1. Bættu takka við Arduino Uno. Þegar ýtt er á hann þá á led sem er tengt við Arduino Nano að lýsa. -->
 
 ---
