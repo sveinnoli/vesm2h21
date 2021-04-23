@@ -8,6 +8,7 @@
       - Það eru breytur sem eru loadaðir í volatile memory, t.d. RAM. Það er gert til að hraðvirkja kóðann sem breytann er notuð í. Það er mjög algengt að declare breytur               volatile sem eru notaðar í Interrupt. 
 1. Settu upp verklega kóða sem notar takka og led með notkun interrupts.
    - [Myndband af virkni](https://youtu.be/JBGjoEG0Slo)
+   - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.1_interrupts/interrupt/interrupt.ino)
 
 **Bjargir:**
 - [Myndband; Arduino Interrupts](https://www.youtube.com/watch?v=QtyOiTw0oQc) 
