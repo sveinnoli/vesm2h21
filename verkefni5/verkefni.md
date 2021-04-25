@@ -1,7 +1,7 @@
 ### 5.1 Interrupts 
 1. Kynntu þér hvernig interrupts virkar og svaraðu eftirfarandi spurningum:
    1. Hvernig notar þú interrupts?
-      - Þú attachar interrupt í kóða á pinna og þegar pinnin fær spennubreyttu hvort sem það er drop, hækkun eða almenn breyting á spennu sem er allt stýrt í gegnum                     kóða er hægt að keyra kóða strax og geymd kóða sem var verið að keyra á tímanum.
+      - Þú attachar interrupt í kóða á pinna og þegar pinnin fær spennubreyttu hvort sem það er drop, hækkun eða almenn breyting á spennu sem er allt stýrt í gegnum                     kóða er hægt að keyra kóða strax og geymd kóða sem var verið að keyra á tímanum, svo er haldið áfram venjulega eftir að interrupt functionið er búinn að keyra.
    1. Hvenær er heppilegt að nota interrupts. komdu með dæmi?
       - Ef þú ert að nota Millisekundur fallið í arduino til að checka hvort það var ýtt á takka eða ekki, í staðinn er hægt að setja interrupt á hann og þegar það kemur                 spennubreyta keyrist kóðinn og það kemur við að þú þarft ekki að eyða klukkutíðni og processing í að kíkja hvort það var ýtt á takkan eða ekki.
    1. Hvað eru volatile breytur?
