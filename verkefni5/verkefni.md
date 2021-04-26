@@ -22,8 +22,24 @@
 Lestu [BASICS OF THE SPI COMMUNICATION PROTOCOL](https://www.circuitbasics.com/basics-of-the-spi-communication-protocol), sjá einnig [myndband um SPI](https://www.youtube.com/watch?v=ldRkXTBw9_o) og svaraðu eftirfarandi spurningum:
    
    1. Hvað er átt við með samstilltum (e. synchronous) samskiptastaðli?
-   1. Útskýrðu master-slave samskipti í SPI útfrá; MISO, MOSI, SCLK og CS/SS.
-   1. Hverjir eru helstu kostir og ókostir við SPI?
+      - Það á við hvernig bits færast á milli master og slave með clock signal, með synchronous samskiðpastaðli synchronisar masterinn clockið sem stjórnar hvernig samskiptinn           milli master og slave mun hegða sér. Hraðinn á synchronous samskipstaðli er stýrt af frequency af clock signalinu.
+   3. Útskýrðu master-slave samskipti í SPI útfrá; MISO, MOSI, SCLK og CS/SS.
+      - SCLK eða Serial Clock er til að stjórna samskipti milli Microcontroller og hvað sem það er tengd við.
+      - MISO (Master in slave out) er input fyrir Masterinn í master-slave samskipti.
+      - MOSI (Master out slave in) er input fyrir slave í master-slave samskipti.
+      - CS/SS (Chip select / Slave select) er til að segja slave að vera viðbúinn að taka á móti signali og ef það er fleiri en einn slave er sagt hvor slave á að taka móti             signalinu.
+      Með þessum tengíngum er hægt að koma við Master-slave samskipti og er mögulegt að taka út CS/SS, MOSI eða MISO eftir því hvað þarfnast í samskiptinu.
+   4. Hverjir eru helstu kostir og ókostir við SPI?
+      - óKostir við SPI eru:
+         - Notar fjóra víra meðan I2C og UART notar tvo.
+         - Er ekki með ACK af því að gögnin hafi borist með góðum árangri.
+         - er ekki með error checking eins og UART sem notar parity bit.
+         - Aðeins leyfir fyrir einn master í Master-slave samskipti.
+      - Kostir við SPI eru 
+          - Þar sem það er ekki error checking er allt send í einu sem kemur að þvi að gögnin eru send án start og stop bits sem þýðir fljótari millufærsla af bitum.
+          - er einfald meðan við önnur communications protocols.
+          - Mun fljótari að millifæra bits meðan við hinn communications protocolin.
+          - Það er með full duplex (MISO, MOSI) er með sitthvora tengingu.
 
 ---
 
