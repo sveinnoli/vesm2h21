@@ -74,6 +74,7 @@ Lestu vel og vandlega og fylgdu tutorial: [How nRF24L01+ Wireless Module Works &
 
 Það eru tvö myndbönd vegna þess að ég gleymdi að taka upp seríal monitorinn í LED myndbandinu, en ef þú kíkjir í fyrsta myndbandið sérðu að það virkar og getur kíkt á kóðan til að sjá að það er skilaboðið sem lætur LEDið blikka.
 1. Til hvers er `IRQ` pinninn og hvernig væri hægt að nota hann td. fyrir fjarstýrða bílinn?
+   - Það er interrupt pini sem gerir masterinum var við nýjum gögnum. Það er hægt að nota hann með sonic sensorinum til að stopa bílinn ef hann kemur of nálægt vegg.  
 
 ---
 
