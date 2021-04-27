@@ -69,7 +69,9 @@ Lestu vel og vandlega og fylgdu tutorial: [How nRF24L01+ Wireless Module Works &
 1. Láttu LED lýsa hjá `transmitter` sem staðfestir að strengur hafi borist til `receiver`. 
    - [Kóði - Receiver](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.4_Wireless_nRF24L01_oneway/Receiver/Receiver.ino)
    - [Kóði - Transmitter](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.4_Wireless_nRF24L01_oneway/transmitter/transmitter.ino)
-   - [Myndband af virkni](https://youtu.be/tdYbaj1a9CA)
+   - [Myndband af virkni - SERIAL MONITOR]
+   - [Myndband af virkni - LED](https://youtu.be/tdYbaj1a9CA)
+Það eru tvö myndbönd vegna þess að ég gleymdi að taka upp seríal monitorinn í LED myndbandinu, en ef þú kíkjir í fyrsta myndbandið sérðu að það virkar og getur kíkt á kóðan til að sjá að það er skilaboðið sem lætur LEDið blikka.
 1. Til hvers er `IRQ` pinninn og hvernig væri hægt að nota hann td. fyrir fjarstýrða bílinn?
 
 ---
