@@ -73,7 +73,7 @@ Lestu vel og vandlega og fylgdu tutorial: [How nRF24L01+ Wireless Module Works &
 
 ### 5.5 Þráðlaus samskipti í báðar áttir með tveimur Arduino. 
 Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síðara sýnidæmið í [myndbandinu](https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/)
-
+   - [Myndband af virkni](https://youtu.be/8b_cnncqXsI)
 ---
 
 ### 5.6 Inter-Integrated Circuit (I2C) Protocol (1%)
@@ -112,11 +112,3 @@ Notaðu MPU6050 til að stjórna servo mótor. Skoðaðu t.d. [LED](https://www.
 <!--
 - [Workshop: 3D Simulation With Processing](https://www.instructables.com/id/Arduino-MPU6050-GY521-6-Axis-Accelerometer-Gyro-3D/)
 -->
-
----
-
-## Námsmat og skil
-
-- Gefið er heilt fyrir fullnægjandi útfærslu og svör, hálft ef ábótavant.
-- Skilaðu á Innu vefslóð á Github Repository (private) sem inniheldur skrár.
-
