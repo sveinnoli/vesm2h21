@@ -67,6 +67,8 @@ Lestu vel og vandlega og fylgdu tutorial: [How nRF24L01+ Wireless Module Works &
 1. Passaðu að hafa sömu tíðnina (Radio Frequency) og fremur há gildi með `.setChannel()` í setup falli.
 1. Strengurinn inniheldur nafnið þitt (ekki Hello World)
 1. Láttu LED lýsa hjá `transmitter` sem staðfestir að strengur hafi borist til `receiver`. 
+   - [Kóði - Receiver](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.4_Wireless_nRF24L01_oneway/Receiver/Receiver.ino)
+   - [Kóði - Transmitter](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.4_Wireless_nRF24L01_oneway/transmitter/transmitter.ino)
 1. Til hvers er `IRQ` pinninn og hvernig væri hægt að nota hann td. fyrir fjarstýrða bílinn?
 
 ---
