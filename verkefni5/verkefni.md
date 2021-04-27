@@ -76,8 +76,7 @@ Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síð
    - [Myndband af virkni](https://youtu.be/8b_cnncqXsI)
    - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.5_Wireless_nRF24L01_twoway/5.5_wirless_comm_twoway/5.5_wirless_comm_twoway.ino)
 
-   ath: til að master-slave samskiptin virki þarf slave að hafa read, write addressin að vera öfug. t.d. master með read = addr 0, write = addr 1 þá þarf slave að hafa 
-   read = 1 og write = 0
+   ath: til að master-slave samskiptin virki verður slave að hafa öfuga read, write addressur á moti masterinum. t.d. master með read = addr 0, write = addr 1 þá þarf slave að      hafa read = 1 og write = 0
 
 ---
 
