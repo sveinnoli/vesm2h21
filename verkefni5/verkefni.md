@@ -1,3 +1,5 @@
+## Verkefni 5 (21%)
+
 ### 5.1 Interrupts 
 1. Kynntu þér hvernig interrupts virkar og svaraðu eftirfarandi spurningum:
    1. Hvernig notar þú interrupts?
@@ -73,3 +75,48 @@ Lestu vel og vandlega og fylgdu tutorial: [How nRF24L01+ Wireless Module Works &
 Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síðara sýnidæmið í [myndbandinu](https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/)
 
 ---
+
+### 5.6 Inter-Integrated Circuit (I2C) Protocol (1%)
+Lestu [I2C](https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/) og svaraðu eftirfarandi spurningum:
+
+   1. I2C notar message og address, hvað er það og hvernig virkar það?
+   1. Hvað er hægt að senda mikið af gögnum (bits) í einu?
+   1. Hver er helsti munurinn á SPI og I2C? 
+
+---
+
+### 5.7. I2C með tvo Arduino (3%)
+Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-arduino/). Sjá einnig [Wire library](https://www.arduino.cc/en/reference/wire)
+
+1. Settu upp kóðasýnidæmin í Arduino IDE -> File -> Examples -> Wire -> slave_sender og master_reader
+1. Útskýrðu hvað eftirfarandi kóði gerir:
+   1. `Wire.beginTransmission(ADDRESS);` Hvaða ADDRESS eru ekki í boði?
+   1. `Wire.onReceive(receiveEvent);` og `Wire.onRequest(requestEvent);` 
+
+<!--
+1. Settu upp síðari tilraunina **Arduino Remote Using I2C** (með breytiviðnámi og led) sem kemur fyrir í [I2C Communications](https://dronebotworkshop.com/i2c-arduino-arduino/) verklega. 
+-->
+---
+
+### 5.8 MPU6050 (3%) 
+1. Kynntu þér [MPU6050](https://lastminuteengineers.com/mpu6050-accel-gyro-arduino-tutorial/) og settu upp verklega bæði kóðadæmin í greininni. Sjá einnig skýringar í [Workshop myndbandi](https://dronebotworkshop.com/mpu-6050-level/).
+1. Svaraðu eftirfarandi spurningum:
+   1. Hvernig virkar MPU6050 og hvað að er hægt að gera með honum?
+   1. Hvað gera XDA og XCL pinnarnir?
+ 
+---
+
+### 5.9 Að stjórna servo motor með MPU6050 (2%) 
+Notaðu MPU6050 til að stjórna servo mótor. Skoðaðu t.d. [LED](https://www.youtube.com/watch?v=7ZmmFVJ8dAI) og [Servo](https://maker.pro/arduino/tutorial/how-to-control-a-servo-with-an-arduino-and-mpu6050)
+
+<!--
+- [Workshop: 3D Simulation With Processing](https://www.instructables.com/id/Arduino-MPU6050-GY521-6-Axis-Accelerometer-Gyro-3D/)
+-->
+
+---
+
+## Námsmat og skil
+
+- Gefið er heilt fyrir fullnægjandi útfærslu og svör, hálft ef ábótavant.
+- Skilaðu á Innu vefslóð á Github Repository (private) sem inniheldur skrár.
+
