@@ -78,6 +78,7 @@ Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síð
 
    ath: til að master-slave samskiptin virki þarf slave að hafa read, write addressin að vera öfug. t.d. master með read = addr 0, write = addr 1 þá þarf slave að hafa 
    read = 1 og write = 0
+
 ---
 
 ### 5.6 Inter-Integrated Circuit (I2C) Protocol (1%)
