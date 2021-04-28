@@ -113,7 +113,7 @@ Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-ardui
 1. Settu upp kóðasýnidæmin í Arduino IDE -> File -> Examples -> Wire -> slave_sender og master_reader
 1. Útskýrðu hvað eftirfarandi kóði gerir:
    1. `Wire.beginTransmission(ADDRESS);` Hvaða ADDRESS eru ekki í boði?
-      - Það byrjar samskiptin með slave sem er með addressið sem er set í functionið. Þar sem address eru 7 bitar eru aðeins addressin á 0-127 til og allt utan fyrir þessar             tölur virka ekki.
+      - Það byrjar samskiptin með slave sem er með addressið sem er set í functionið. Þar sem address eru 7 bitar eru aðeins addressin á 0-127 til og allt utan fyrir þessar             tölur virka ekki. Addressin eru í binary.
    3. `Wire.onReceive(receiveEvent);` og `Wire.onRequest(requestEvent);` 
 
 <!--
@@ -126,11 +126,15 @@ Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-ardui
 1. Svaraðu eftirfarandi spurningum:
    1. Hvernig virkar MPU6050 og hvað að er hægt að gera með honum?
    1. Hvað gera XDA og XCL pinnarnir?
+   - [Myndband af virkni](https://youtu.be/b3BR2_ULqwg)
+   - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.8_MPU6050/5.8_MPU6050_DATA/5.8_MPU6050_DATA.ino)
  
 ---
 
 ### 5.9 Að stjórna servo motor með MPU6050 (2%) 
 Notaðu MPU6050 til að stjórna servo mótor. Skoðaðu t.d. [LED](https://www.youtube.com/watch?v=7ZmmFVJ8dAI) og [Servo](https://maker.pro/arduino/tutorial/how-to-control-a-servo-with-an-arduino-and-mpu6050)
+   - [Myndband af virkni](https://youtu.be/p-cR5t2Ps98)
+   - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.9_MPU6050_SERVO_MOTOR/5.9_mpu6050_Servo/5.9_mpu6050_Servo.ino)
 
 <!--
 - [Workshop: 3D Simulation With Processing](https://www.instructables.com/id/Arduino-MPU6050-GY521-6-Axis-Accelerometer-Gyro-3D/)
