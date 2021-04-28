@@ -94,7 +94,7 @@ Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síð
 Lestu [I2C](https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/) og svaraðu eftirfarandi spurningum:
 
    1. I2C notar message og address, hvað er það og hvernig virkar það?
-      - I2C virkar svipað og OSI - datalink layerinn virkar, það sendir frame sem inniheldur skilaboði sem er brotinn niður í minni hluta, og einn partur af messsageinu er Address frame sem inniheldur 7 eða 10 bita sem eru í einstaku röð sem greinir hvern slave er verið að ná í. Ef það er send 10 bita þá er max slaves sem kemur til greina 2^10 = 1024.
+      - I2C virkar svipað og OSI - datalink layerinn virkar, það sendir frame sem inniheldur skilaboði sem er brotinn niður í minni hluta, og einn partur af messsageinu er Address frame sem inniheldur 7 bita (eða 10 en flestar greinir benda á að það eru aðeins 7) sem eru í einstaku röð sem greinir hvern slave er verið að ná í. Ef það er send 7 bita þá er max slaves sem kemur til greina 2^7 = 128.
       
       NOTE: 
          - Þessi virkni er grunnatriði af undirstöðuatriðum netkerfa, I2C er mjög líkt TCP og SPI er mjög líkt UDP í það að I2C er með error checking og SPI er bara að senda gögnin og vona að þau komist til viðtakandann.
@@ -113,7 +113,8 @@ Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-ardui
 1. Settu upp kóðasýnidæmin í Arduino IDE -> File -> Examples -> Wire -> slave_sender og master_reader
 1. Útskýrðu hvað eftirfarandi kóði gerir:
    1. `Wire.beginTransmission(ADDRESS);` Hvaða ADDRESS eru ekki í boði?
-   1. `Wire.onReceive(receiveEvent);` og `Wire.onRequest(requestEvent);` 
+      - Það byrjar samskiptin með slave sem er með addressið sem er set í functionið. Þar sem address eru 7 bitar eru aðeins addressin á 0-127 til og allt utan fyrir þessar             tölur virka ekki.
+   3. `Wire.onReceive(receiveEvent);` og `Wire.onRequest(requestEvent);` 
 
 <!--
 1. Settu upp síðari tilraunina **Arduino Remote Using I2C** (með breytiviðnámi og led) sem kemur fyrir í [I2C Communications](https://dronebotworkshop.com/i2c-arduino-arduino/) verklega. 
