@@ -98,8 +98,12 @@ Lestu [I2C](https://www.circuitbasics.com/basics-of-the-i2c-communication-protoc
       
       NOTE: 
          - Þessi virkni er grunnatriði af undirstöðuatriðum netkerfa, I2C er mjög líkt TCP og SPI er mjög líkt UDP í það að I2C er með error checking og SPI er bara að senda gögnin og vona að þau komist til viðtakandann.
-   3. Hvað er hægt að senda mikið af gögnum (bits) í einu?
-   4. Hver er helsti munurinn á SPI og I2C? 
+   2. Hvað er hægt að senda mikið af gögnum (bits) í einu?
+      - 8 bits með most significant bit sem fyrsta bit. 
+   3. Hver er helsti munurinn á SPI og I2C? 
+      - I2C er með ACK/NACK bit sem gefur staðfestingu að gögnin millifærðust með góðum árangri.
+      - Það tekur aðeins tvo víra sem er mjög gott ef verið að nota marga slaves.
+      - Styður marga masters miðað við SPI sem styður aðeins 1
 
 ---
 
