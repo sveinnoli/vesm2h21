@@ -48,6 +48,9 @@ Lestu [BASICS OF THE SPI COMMUNICATION PROTOCOL](https://www.circuitbasics.com/b
 ### 5.3 SPI samskipti milli tveggja Arduino. 
 Settu upp á Breadboard með Arduino Uno og [Nano](https://www.arduino.cc/en/pmwiki.php?n=Main/ArduinoBoardNano) þannig að þeir geti notað SPI samskipti með [SPI safninu](https://www.arduino.cc/en/reference/SPI) til að tala saman.
 1. Arduino Uno á að geta sent streng (nafnið þitt) til Arduino Nano sem birtir svo nafn á Serial Monitor. Sjá t.d. [How do you use SPI on an Arduino?](https://arduino.stackexchange.com/questions/16348/how-do-you-use-spi-on-an-arduino).
+   - [Myndband af virkni](https://youtu.be/N7RIMoUrLho)
+   - [Kóði - Master](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_1_ardu_comm_text/Master/Master.ino)
+   - [Kóði - Slave](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_1_ardu_comm_text/Slave/Slave.ino)
 1. Bættu takka við Arduino Uno. Þegar ýtt er á hann þá á led sem er tengt við Arduino Nano að lýsa. 
    - [Myndband af virkni](https://youtu.be/d85kyIewoYc)
    - [Kóði - Master](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.3_SPI_Communications_Arduino/5.3_2-3_ardu_comm_btn_lights/Master_SPI/Master_SPI.ino)
