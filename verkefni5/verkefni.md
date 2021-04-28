@@ -94,8 +94,12 @@ Sýndu samskipti sem fara í báðar áttir með notkun takka og led. Sjá síð
 Lestu [I2C](https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/) og svaraðu eftirfarandi spurningum:
 
    1. I2C notar message og address, hvað er það og hvernig virkar það?
-   1. Hvað er hægt að senda mikið af gögnum (bits) í einu?
-   1. Hver er helsti munurinn á SPI og I2C? 
+      - I2C virkar svipað og OSI - datalink layerinn virkar, það sendir frame sem inniheldur skilaboði sem er brotinn niður í minni hluta, og einn partur af messsageinu er Address frame sem inniheldur 7 eða 10 bita sem eru í einstaku röð sem greinir hvern slave er verið að ná í. Ef það er send 10 bita þá er max slaves sem kemur til greina 2^10 = 1024.
+      
+      NOTE: 
+         - Þessi virkni er grunnatriði af undirstöðuatriðum netkerfa, I2C er mjög líkt TCP og SPI er mjög líkt UDP í það að I2C er með error checking og SPI er bara að senda gögnin og vona að þau komist til viðtakandann.
+   3. Hvað er hægt að senda mikið af gögnum (bits) í einu?
+   4. Hver er helsti munurinn á SPI og I2C? 
 
 ---
 
