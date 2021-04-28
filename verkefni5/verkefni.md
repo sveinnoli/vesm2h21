@@ -111,6 +111,9 @@ Lestu [I2C](https://www.circuitbasics.com/basics-of-the-i2c-communication-protoc
 Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-arduino/). Sjá einnig [Wire library](https://www.arduino.cc/en/reference/wire)
 
 1. Settu upp kóðasýnidæmin í Arduino IDE -> File -> Examples -> Wire -> slave_sender og master_reader
+   - [Myndband af virkni](https://www.youtube.com/watch?v=sIL3RBXLBGM&ab_channel=Icgxstriker)
+   - [Kóði - Master](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.7_I2C/master_reader/master_reader.ino)
+   - [Kóði - Slave](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.7_I2C/slave_sender/slave_sender.ino)
 1. Útskýrðu hvað eftirfarandi kóði gerir:
    1. `Wire.beginTransmission(ADDRESS);` Hvaða ADDRESS eru ekki í boði?
       - Það byrjar samskiptin með slave sem er með addressið sem er set í functionið. Þar sem address eru 7 bitar eru aðeins addressin á 0-127 til og allt utan fyrir þessar             tölur virka ekki. Addressin eru í binary.
