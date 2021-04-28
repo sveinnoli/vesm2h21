@@ -115,6 +115,8 @@ Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-ardui
    1. `Wire.beginTransmission(ADDRESS);` Hvaða ADDRESS eru ekki í boði?
       - Það byrjar samskiptin með slave sem er með addressið sem er set í functionið. Þar sem address eru 7 bitar eru aðeins addressin á 0-127 til og allt utan fyrir þessar             tölur virka ekki. Addressin eru í binary.
    3. `Wire.onReceive(receiveEvent);` og `Wire.onRequest(requestEvent);` 
+   - Wire.onReceive(receiveEvent) keyrir function þegar slave fær transmission frá masterinum.
+   - Wire.onRequest(requestEvent) keyrir function þegar master biður um gögn frá slave device.
 
 <!--
 1. Settu upp síðari tilraunina **Arduino Remote Using I2C** (með breytiviðnámi og led) sem kemur fyrir í [I2C Communications](https://dronebotworkshop.com/i2c-arduino-arduino/) verklega. 
