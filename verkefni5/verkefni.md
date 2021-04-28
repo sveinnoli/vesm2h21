@@ -128,7 +128,12 @@ Kynntu þér [I2C Communications](https://dronebotworkshop.com/i2c-arduino-ardui
 1. Kynntu þér [MPU6050](https://lastminuteengineers.com/mpu6050-accel-gyro-arduino-tutorial/) og settu upp verklega bæði kóðadæmin í greininni. Sjá einnig skýringar í [Workshop myndbandi](https://dronebotworkshop.com/mpu-6050-level/).
 1. Svaraðu eftirfarandi spurningum:
    1. Hvernig virkar MPU6050 og hvað að er hægt að gera með honum?
-   1. Hvað gera XDA og XCL pinnarnir?
+      - MPU 6050 er gyroscope, accelerometer og hitamælir, sem þýðir að hann getur mælt snúníng, hraða og hita. 
+        1. Til að mæla hraða getur accelerometer tekið in aflið sem valdi breytu í hreyfinguni sem veldur því að massin kreistir eitthvað þekkt sem 'piezoelectric efni' sem                 skilar frá sér rafhleðslu sem er í rettu hlutfalli við kraftinn sem var beittur á hann.
+            - í MPU6050 er notað eitthvað sem er kallað MEM Accelerometer sem notar sílikísil sem beygir þegar hröðun er beit á tiltekna ás og Vegna sveigju er rýmd milli fastra               platna og platna sem eru festir við sviflausnina breytt. Þessi breyting á rýmd er í réttu hlutfalli við hröðunina á þeim ás.
+        1. Til að mæla snúning er notað eitthvað þekkt sem Coriolis Effect segir okkur að þegar massa (m) hreyfist í tiltekna átt með hraða (v) og ytri hornhraða (Ω) er beitt              Coriolis áhrif mynda kraft sem veldur hornréttri tilfærslu á massa. Gildi þessarar tilfærslu er í beinu samhengi við beittan hlutfallshorn.
+            - MPU6050 notar eitthvað þekkt sem MEMS gyroscope sem er samsettur af sönnunarmassa sem inniheldur 4 hluta (m1, m2, m3, m4) sem er haldið í stöðugum                               sveifluhreyfingum þannig að það bregst við coriolis áhrifunum. Þau hreyfast inn og út samtímis í lárétta planinu. Þegar við byrjum að snúa uppbyggingunni breytir                 Coriolis-krafturinn sem virkar á hreyfanlegan sönnunarmassa titring titringsins frá láréttri til lóðréttrar. Það eru þrjár stillingar eftir því hvaða ás                         hornhringurinn er beittur og þessi þrjár stillingar gefa út rýmisbreytingu sem skynjurabyggingin tekur upp og breytist síðan í spennumerki.
+       Það er hægt að nota MPU6050 í mörg tillföll þar sem hraðamæling, snúningsmælingar eða hitamælingar eru vantaðar. 
    - [Myndband af virkni](https://youtu.be/b3BR2_ULqwg)
    - [Kóði](https://github.com/sveinnoli/vesm2h21/blob/main/verkefni5/5.8_MPU6050/5.8_MPU6050_DATA/5.8_MPU6050_DATA.ino)
  
