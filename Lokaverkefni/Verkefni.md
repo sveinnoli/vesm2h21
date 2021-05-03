@@ -16,8 +16,11 @@ Motor Driver
 > orange - 8
 > red - 9
 
+---
 
 ### Steering
+
+---
 
 #### Joystick
 Hnitakerfi:
