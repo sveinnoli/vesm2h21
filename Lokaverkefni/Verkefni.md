@@ -20,7 +20,7 @@ Motor Driver
 
 ### Steering
 
-#### Joystick
+#### 1. Joystick
 Núllstöðvar:
 - X-ás: 533
 - Y-ás: 498
