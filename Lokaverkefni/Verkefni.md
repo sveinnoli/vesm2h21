@@ -20,7 +20,20 @@ Motor Driver
 
 ### Steering
 
----
-
 #### Joystick
+Núllstöðvar:
+- X-ás: 533
+- Y-ás: 498
+
 Hnitakerfi:
+
+> I   : x+ y+ (Áfram og til hægri)
+>
+> II  : x- y+ (Áfram og til vinstri)
+>
+> III : x- y- (Til baka og til vinstri)
+>
+> IIII: x+ y- (Til baka og til hægri) 
+
+
+---
