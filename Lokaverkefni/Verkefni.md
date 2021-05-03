@@ -4,6 +4,8 @@
 
 ### Components
 
+
+
 ---
 
 ### Connections
@@ -13,3 +15,9 @@ Motor Driver
 > yellow - 7
 > orange - 8
 > red - 9
+
+
+### Steering
+
+#### Joystick
+Hnitakerfi:
