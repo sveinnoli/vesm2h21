@@ -27,13 +27,13 @@ Núllstöðvar:
 
 Hnitakerfi:
 
-> I   : x+ y+ (Áfram og til hægri)
->
-> II  : x- y+ (Áfram og til vinstri)
->
-> III : x- y- (Til baka og til vinstri)
->
-> IIII: x+ y- (Til baka og til hægri) 
+I   : x+ y+ (Áfram og til hægri)
+
+II  : x- y+ (Áfram og til vinstri)
+
+III : x- y- (Til baka og til vinstri)
+
+IIII: x+ y- (Til baka og til hægri) 
 
 
 ---
