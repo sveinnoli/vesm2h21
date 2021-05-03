@@ -1,14 +1,14 @@
-## Remote controlled car
+# Remote controlled car
 
 ---
 
-### Components
+## Components
 
 
 
 ---
 
-### Connections
+## Connections
 Motor Driver
 > Blue - 4
 > green - 5
@@ -18,7 +18,7 @@ Motor Driver
 
 ---
 
-### Steering
+## Steering
 
 #### 1. Joystick
 Núllstöðvar:
