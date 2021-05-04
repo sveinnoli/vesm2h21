@@ -61,20 +61,23 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 #### Offsets fyrir x-ás og y-ás
 
 ##### X-ás (Vinstri og hægri)
-> Right: 267-511 Total(244)
-> 
-> Center: 266
-> 
-> Left: 265-0 Total(265)
+```
+Right: 267-511 Total(244)
 
+Center: 266
+
+Left: 265-0 Total(265)
+```
 Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 ##### Y-ás: (Áfram og til baka)
-> forward: 250-0 Total(250)
-> 
-> Center: 249
-> 
-> back: 250-511 Total(261)
+```
+forward: 250-0 Total(250)
+
+Center: 249
+
+back: 250-511 Total(261)
+```
 
 Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
@@ -87,26 +90,28 @@ Til að breyta þessum tölum yfir í prósentar einíngu fyrir max_speed notum 
 ### Motor Driver
 Conditions for turning off motors, going forward and backwards.
  
+
+```
 OFF:
-> IN1: LOW
-> 
-> IN2: LOW
+IN1: LOW
+
+IN2: LOW
 
 Backwards:
-> IN1:HIGH
->
->  IN2:LOW  
+IN1:HIGH
+
+IN2:LOW  
 
 Forward:
-> IN1: LOW
-> 
-> IN2: HIGH
+IN1: LOW
+
+IN2: HIGH
 
 OFF:
->IN1: HIGH
->
->IN2: HIGH
+IN1: HIGH
 
+IN2: HIGH
+```
 
 Til að stýra bíllnum í sér átt þurfa pinnarnir að vera stiltir eins og eftirfarandi:
 
