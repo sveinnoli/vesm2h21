@@ -9,6 +9,15 @@ MotorA: Vinstri
 
 MotorB: Hægri
 
+### MPU 6050
+
+### Joystick
+
+### Arduino Nano
+
+### Arduino Uno
+
+### Ultrasonic Sensor
 
 
 
@@ -102,8 +111,12 @@ Vinstri:
 > 
 > IN3=LOW, IN4=HIGH
 
+### MPU 6050
 
-#### Hnitakerfi:
+
+## Ýttri upplýsingar
+
+### Hnitakerfi:
 
 I   : x+ y+ (Áfram og til hægri)
 
