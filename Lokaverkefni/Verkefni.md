@@ -59,7 +59,7 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 
 #### Offsets fyrir x-ás og y-ás
 
-##### x_Axis (Vinstri og hægri)
+##### X-ás (Vinstri og hægri)
 Right: 245 (includes center)
 
 Left: 265
@@ -67,7 +67,7 @@ Left: 265
 Center: 266
 
 
-##### y_AXis: (Áfram og til baka)
+##### Y-ás: (Áfram og til baka)
 forward: 249 (includes center)
 
 back: 261
