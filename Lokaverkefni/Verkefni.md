@@ -113,6 +113,7 @@ Vinstri:
 
 ### MPU 6050
 
+---
 
 ## Ýttri upplýsingar
 
