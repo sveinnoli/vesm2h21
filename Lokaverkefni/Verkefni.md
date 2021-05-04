@@ -69,11 +69,11 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 > Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 ##### Y-ás: (Áfram og til baka)
-forward: 250-0 Total(250)
-
-Center: 249
-
-back: 250-511 Total(261)
+> forward: 250-0 Total(250)
+> 
+> Center: 249
+> 
+> back: 250-511 Total(261)
 
 Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
