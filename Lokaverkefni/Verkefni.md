@@ -23,10 +23,11 @@ MotorB: Hægri
 
 ---
 
-## Connections
+## Tengingar
 ### Motor Driver
+!BÆTA VIÐ TÖFLU
 
-> ENA: Purple - 3
+> ENA: Purple - 3 
 > 
 > IN4: Blue - 4
 > 
