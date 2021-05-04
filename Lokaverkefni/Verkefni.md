@@ -60,19 +60,23 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 #### Offsets fyrir x-ás og y-ás
 
 ##### X-ás (Vinstri og hægri)
-Right: 245 (includes center)
-
-Left: 265
+Right: 267-511
 
 Center: 266
 
+Left: 265-0
+
+
+
 
 ##### Y-ás: (Áfram og til baka)
-forward: 249 (includes center)
-
-back: 261
+forward: 250-0 Total(249)
 
 Center: 249
+
+back: 250-511 Total(261)
+
+
 
 
 ### Motor Driver
