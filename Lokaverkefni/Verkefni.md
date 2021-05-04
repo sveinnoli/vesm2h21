@@ -15,7 +15,8 @@ MotorB: Hægri
 ---
 
 ## Connections
-Motor Driver
+### Motor Driver
+
 > ENA: Purple - 3
 > IN4: Blue - 4
 > IN3: green - 5
