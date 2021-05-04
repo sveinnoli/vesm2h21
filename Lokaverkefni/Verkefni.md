@@ -103,7 +103,7 @@ Vinstri:
 > IN3=LOW, IN4=HIGH
 
 
-Hnitakerfi:
+#### Hnitakerfi:
 
 I   : x+ y+ (Áfram og til hægri)
 
