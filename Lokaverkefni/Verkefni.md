@@ -54,17 +54,17 @@ Núllstöðvar:
 
 ##### X-ás (Vinstri og hægri)
 ```
-Right: 267-511 Total(245)
+Right: 266-511 Total(245)
 
 Center: 266
 
-Left: 265-0 Total(265)
+Left: 266-0 Total(266)
 ```
 Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 ##### Y-ás: (Áfram og til baka)
 ```
-forward: 250-0 Total(249)
+forward: 249-0 Total(249)
 
 Center: 249
 
@@ -75,8 +75,6 @@ Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæð
 
 Til að breyta þessum tölum yfir í prósentar einíngu fyrir max_speed notum við map() fallið t.d. map(x gildi, 0, 255, 0, max_speed)
 Þetta breytir öllum gildum yfir 0-255 yfir í 0 til hraðan sem við ákveðum sem max hraða. Þar sem joystickið er ekki með nákvæmlega 256 tölur fyrir hvern ás líklega vegna framleiðanda galla er þetta mjög þægilegt.
-
-
 
 
 ### Motor Driver
