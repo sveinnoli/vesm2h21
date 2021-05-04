@@ -78,7 +78,7 @@ Center: 249
 ### Motor Driver
 Conditions for turning off motors, going forward and backwards.
  
- OFF:
+OFF:
 > IN1: LOW
 > 
 > IN2: LOW
