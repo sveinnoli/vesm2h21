@@ -29,29 +29,6 @@ MotorB: Hægri
 > 
 > ENB: red - 9
 
-Conditions for turning off motors, going forward and backwards.
- 
-IN1: LOW
-IN2: LOW
-
-Result: OFF
-
-IN1:HIGH
-IN2:LOW
-
-Result: Backwards
-
-IN1: LOW
-IN2: HIGH
-
-Result: Forward
-
-IN1: HIGH
-IN2: HIGH
-
-Result: OFF
-
-
 ---
 
 ## Steering
@@ -70,6 +47,39 @@ Núllstöðvar eru ekki nákvæmlega 2^10/2 = 512 líklega vegna framleiðanda v
 En það er ekki hægt að nota 68 þar sem frictionið leyfir ekki dekkjonum að keyra sig áfram frá kjurru stöðu ef það fær gildi sem er minni en 70-75. Þannig lausnin er, er að byrja á milli 75-100 og læggi sig svo niður í 68 þar sem það er hægt að keyra á 68 ef dekkin eru þegar á hreyfingu þar sem friction hefur mun minni áhrif ef það er þegar á hreyfingu.
 
 Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 75 settu hana sem 75. Þetta takmarkar samt nákvæmari hreyfingar.
+
+### Motor Driver
+Conditions for turning off motors, going forward and backwards.
+ 
+> IN1: LOW
+> 
+> IN2: LOW
+Result: OFF
+
+> IN1:HIGH
+>
+>  IN2:LOW
+Result: Backwards
+
+> IN1: LOW
+> 
+> IN2: HIGH
+Result: Forward
+
+IN1: HIGH
+
+IN2: HIGH
+Result: OFF
+
+Til að stýra bíllnum í sér átt þurfa pinnarnir að vera stiltir eins og eftirfarandi:
+
+Hægri:
+IN1=LOW, IN2=HIGH
+IN3=HIGH, IN4=LOW
+
+Vinstri:
+IN1=HIGH, IN2=LOW
+IN3=LOW, IN4=HIGH
 
 
 Hnitakerfi:
