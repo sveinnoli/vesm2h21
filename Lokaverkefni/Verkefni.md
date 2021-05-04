@@ -3,7 +3,7 @@
 ---
 
 ## Components
-Motor Driver
+### Motor Driver
 
 MotorA: Vinstri
 
