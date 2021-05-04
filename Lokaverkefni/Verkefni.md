@@ -94,10 +94,12 @@ Til að stýra bíllnum í sér átt þurfa pinnarnir að vera stiltir eins og e
 
 Hægri:
 IN1=LOW, IN2=HIGH
+
 IN3=HIGH, IN4=LOW
 
 Vinstri:
 IN1=HIGH, IN2=LOW
+
 IN3=LOW, IN4=HIGH
 
 
