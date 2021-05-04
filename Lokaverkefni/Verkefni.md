@@ -60,22 +60,28 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 #### Offsets fyrir x-ás og y-ás
 
 ##### X-ás (Vinstri og hægri)
-Right: 267-511
+Right: 267-511 Total(244)
 
 Center: 266
 
-Left: 265-0
+Left: 265-0 Total(265)
 
+Right er 21 minni en Left þannig það þarf að annaðhvort breytu bæði í prósentar einíngar eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 
 
 ##### Y-ás: (Áfram og til baka)
-forward: 250-0 Total(249)
+forward: 250-0 Total(250)
 
 Center: 249
 
 back: 250-511 Total(261)
 
+
+Forward er 11 minni en Back þannig það þarf að annaðhvort breytu bæði í prósentar einíngar eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
+
+#### NOTE:
+ - Gildin eru ekki einmit 9 bits en í staðin 2^9-1 þar sem Joystickið gefur út gildi sem er 10 bits eða 0-1023 og tölur sem eru deilaðar eru rúnuð í lægsta heiltölu í stað fyrir    að halda sér sem float. Þannig hæðsta gildið er 511, ef ég vill offseta bæði X og Y hjá joystickinu þarf ég að taka það í huga að hæðsta gildið fyrir hvert af þeim verður        ekki 256 en 255.
 
 
 
