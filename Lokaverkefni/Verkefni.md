@@ -66,7 +66,7 @@ Center: 266
 
 Left: 265-0 Total(265)
 
-Right er 21 minni en Left þannig það þarf að annaðhvort breytu bæði í prósentar einíngar eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
+Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 
 
@@ -77,12 +77,8 @@ Center: 249
 
 back: 250-511 Total(261)
 
+Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
-Forward er 11 minni en Back þannig það þarf að annaðhvort breytu bæði í prósentar einíngar eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
-
-#### NOTE:
- - Gildin eru ekki einmit 9 bits en í staðin 2^9-1 þar sem Joystickið gefur út gildi sem er 10 bits eða 0-1023 og tölur sem eru deilaðar eru rúnuð í lægsta heiltölu t.d.
- 1023/2 = 511.5 Þannig það mun rúna það niður í 511. Ef ég vil offseta bæði X-ás og Y-ás þarf ég að hafa í huga að hæðsta gildin verður þá að vera 255 fyrir hvern ás.
 
 
 
