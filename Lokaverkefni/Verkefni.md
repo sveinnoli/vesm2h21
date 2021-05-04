@@ -18,10 +18,15 @@ MotorB: Hægri
 ### Motor Driver
 
 > ENA: Purple - 3
+> 
 > IN4: Blue - 4
+> 
 > IN3: green - 5
+> 
 > IN2: yellow - 7
+> 
 > IN1: orange - 8
+> 
 > ENB: red - 9
 
 Conditions for turning off motors, going forward and backwards.
