@@ -33,7 +33,7 @@ MotorB: Hægri
 
 ## Steering
 
-#### 1. Joystick
+### 1. Joystick
 Núllstöðvar:
 - X-ás: 533 
 - Y-ás: 498
@@ -47,6 +47,24 @@ Núllstöðvar eru ekki nákvæmlega 2^10/2 = 512 líklega vegna framleiðanda v
 En það er ekki hægt að nota 68 þar sem frictionið leyfir ekki dekkjonum að keyra sig áfram frá kjurru stöðu ef það fær gildi sem er minni en 70-75. Þannig lausnin er, er að byrja á milli 75-100 og læggi sig svo niður í 68 þar sem það er hægt að keyra á 68 ef dekkin eru þegar á hreyfingu þar sem friction hefur mun minni áhrif ef það er þegar á hreyfingu.
 
 Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 75 settu hana sem 75. Þetta takmarkar samt nákvæmari hreyfingar.
+
+#### Offsets fyrir x-ás og y-ás
+
+##### x_Axis
+Right: 245 (includes center)
+
+Left: 265
+
+Center: 266
+
+
+##### y_AXis:
+forward: 249 (includes center)
+
+back: 261
+
+Center: 249
+
 
 ### Motor Driver
 Conditions for turning off motors, going forward and backwards.
