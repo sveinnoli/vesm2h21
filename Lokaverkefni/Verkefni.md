@@ -3,6 +3,11 @@
 ---
 
 ## Components
+Motor Driver
+
+MotorA: Vinstri
+MotorB: Hægri
+
 
 
 
@@ -10,11 +15,35 @@
 
 ## Connections
 Motor Driver
-> Blue - 4
-> green - 5
-> yellow - 7
-> orange - 8
-> red - 9
+> ENA: Purple - 3
+> IN4: Blue - 4
+> IN3: green - 5
+> IN2: yellow - 7
+> IN1: orange - 8
+> ENB: red - 9
+
+Conditions for turning off motors, going forward and backwards.
+ 
+IN1: LOW
+IN2: LOW
+
+Result: OFF
+
+IN1:HIGH
+IN2:LOW
+
+Result: Backwards
+
+IN1: LOW
+IN2: HIGH
+
+Result: Forward
+
+IN1: HIGH
+IN2: HIGH
+
+Result: OFF
+
 
 ---
 
