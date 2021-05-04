@@ -51,25 +51,26 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 ### Motor Driver
 Conditions for turning off motors, going forward and backwards.
  
+ OFF:
 > IN1: LOW
 > 
 > IN2: LOW
-Result: OFF
 
+Backwards:
 > IN1:HIGH
 >
->  IN2:LOW
-Result: Backwards
+>  IN2:LOW  
 
+Forward:
 > IN1: LOW
 > 
 > IN2: HIGH
-Result: Forward
 
-IN1: HIGH
+OFF:
+>IN1: HIGH
+>
+>IN2: HIGH
 
-IN2: HIGH
-Result: OFF
 
 Til að stýra bíllnum í sér átt þurfa pinnarnir að vera stiltir eins og eftirfarandi:
 
