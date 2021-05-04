@@ -60,13 +60,13 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 #### Offsets fyrir x-ás og y-ás
 
 ##### X-ás (Vinstri og hægri)
-Right: 267-511 Total(244)
-
-Center: 266
-
-Left: 265-0 Total(265)
-
-Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
+> Right: 267-511 Total(244)
+> 
+> Center: 266
+> 
+> Left: 265-0 Total(265)
+> 
+> Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í prósentar einíngar fyrir max gildi eða setja offset til að koma báðum tölum inn í gildi sem eru 8 bits.
 
 ##### Y-ás: (Áfram og til baka)
 forward: 250-0 Total(250)
