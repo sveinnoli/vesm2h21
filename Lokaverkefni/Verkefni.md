@@ -62,7 +62,7 @@ Líka er hægt að bæta við minspeed sem segir ef þú færð tölu minni en 7
 
 ##### X-ás (Vinstri og hægri)
 ```
-Right: 267-511 Total(244)
+Right: 267-511 Total(245)
 
 Center: 266
 
@@ -72,7 +72,7 @@ Right er 21 minni en Left þannig það þarf að annaðhvort breyta bæði í p
 
 ##### Y-ás: (Áfram og til baka)
 ```
-forward: 250-0 Total(250)
+forward: 250-0 Total(249)
 
 Center: 249
 
