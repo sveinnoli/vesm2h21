@@ -126,6 +126,8 @@ IN1=HIGH, IN2=LOW
 IN3=LOW, IN4=HIGH
 ```
 
+Það er líka hægt að hafa bæði dekkin snúa í sama átt en hafa dekkin á það hlið sem er verið að snúa í vera með mun minni PWM set í það en anstæða hliðin sem er verið að snúa í.
+
 ### MPU 6050
 
 ---
