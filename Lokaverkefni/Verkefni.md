@@ -79,7 +79,9 @@ Til að breyta þessum tölum yfir í prósentar einíngu fyrir max_speed notum 
 
 ### Motor Driver
 Conditions for turning off motors, going forward and backwards.
- 
+A: IN1, IN2
+
+B: IN3, IN4
 
 ```
 OFF:
