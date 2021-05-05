@@ -124,12 +124,13 @@ IN3=LOW, IN4=HIGH
 ### MPU 6050
 
 Til að nota MPU6050 til að stjórna fjarstýringu þarf að taka inn acceleration á X, Y ásinum. 
-Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -.
+Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -
+```
 Forward:   Y er -
 Backwards: Y er +
 Left:      X er +
 Right:     X er -
-
+```
 ---
 
 ## Millifærsla
