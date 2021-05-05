@@ -137,6 +137,12 @@ Motorcontrol[] =
 }
 ```
 
+## Dagbók
+
+#### 03/05 - 05/05
+Setti up NRF tengin við bílinn og náði að millifæra array frá fjarstýringunni til bíllsins og náði einföldu keyrslu (áfram og til baka).
+
+
 ## Ýttri upplýsingar
 
 ### Hnitakerfi:
