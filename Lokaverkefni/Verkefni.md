@@ -124,6 +124,7 @@ IN3=LOW, IN4=HIGH
 
 ## Millifærsla
 
+```
 Motorcontrol[] = 
 {
  0 = y_axis
@@ -131,7 +132,7 @@ Motorcontrol[] =
  2 = [1 = forward, 2 = backwards]
  3 = [1 = right, 2 = left]
 }
-
+```
 
 ## Ýttri upplýsingar
 
