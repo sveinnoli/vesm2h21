@@ -19,8 +19,16 @@ void Joystick::update_data(int new_x, int new_y, bool new_button_state) {
     _button_state = new_button_state;
 }
 
-void Joystick::print_data() {
+void Joystick::debug() {
   Serial.println(_x);  
   Serial.println(_y);
   Serial.println(_button_state);
+}
+
+void Joystick::ret_array() {
+    int myArray[3] = {};
+    myArray[0] = _x
+    myArray[1] = _y
+    myArray[2] = _button_state
+    return myArray;
 }

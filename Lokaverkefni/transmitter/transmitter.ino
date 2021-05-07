@@ -154,9 +154,7 @@ void loop()
   y_axis = analogRead(joystick_y)/2;
   joystick_button_state = digitalRead(joystick_button);
   joystick.update_data(x_axis, y_axis, joystick_button_state);
-  joystick.print_data();
-
-  
+  joystick.debug();
   //MPU 6050 sensors
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);

@@ -14,7 +14,7 @@ class Joystick
     public:
         Joystick(int x, int y, bool button_state);
         void update_data(int new_x, int new_y, bool new_button_state);
-        void print_data();
+        void debug();
     private:
         int _x;
         int _y;
