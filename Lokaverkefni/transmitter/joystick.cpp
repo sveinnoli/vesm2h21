@@ -31,4 +31,3 @@ int* Joystick::ret_array(int *arr) {
     arr[2] = 3;
     return arr;
 }
-
