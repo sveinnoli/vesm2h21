@@ -51,8 +51,6 @@ void motorB_set_speed(uint8_t motor_speed) {
 }
 
 
-
-  
 void setup()
 {
   // Set all the motor control pins to outputs

@@ -18,8 +18,8 @@ int y_axis = 0;
 int joystick_button_state = 0;
 
 //Joystick x and y axis offset
-int x_axis_center_offset = 266;
-int y_axis_center_offset = 249;
+int x_axis_center_offset = 266; // 256+10 center+offset
+int y_axis_center_offset = 249; // 256-7  center-offset
 
 //Joystick direction max value factoring offset
 int x_axis_right_max_value = 245;
@@ -47,7 +47,7 @@ unsigned long debounceDelay = 50;
 //MPU6050 axis controls
 uint8_t mpu6050_x_axis = 0; 
 uint8_t mpu6050_y_axis = 0;
-uint8_t mpu6050_max_value = 9.8;
+float mpu6050_max_value = 9.8;
 
 
 //create an RF24 object
@@ -55,7 +55,6 @@ RF24 radio(9, 8);  // CE, CSN
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
-
 
 void mpu6050_init(void){
   if (!mpu.begin()) {
@@ -78,7 +77,6 @@ void mpu6050_config(void) {
 }
 
 void RF24_init(void) {
-  //RF24_init
   radio.begin();
   radio.setChannel(106);
   radio.setPALevel(RF24_PA_MIN);
@@ -100,6 +98,7 @@ void set_pinmode(void) {
   pinMode(mpu6050_button, INPUT_PULLUP);  
 }
 
+//Joystick directions
 bool joystick_direction_backwards(int y_axis) {
   if (y_axis > y_axis_center_offset) {
     return true;  
@@ -138,8 +137,8 @@ void setup()
 
   //Init Serial
   Serial.begin(115200);
-  
-  //Initialize MPU 6050
+
+  //Init mpu6050
   mpu6050_init();
 
   //Configure the MPU6050
@@ -180,27 +179,27 @@ void loop()
   //Going Left
   if (a.acceleration.x >= 0) {
     Serial.println("Going left");
-    mpu6050_x_axis = map(a.acceleration.x, 0, mpu6050_max_value, 0, motor_maxspeed);
+    mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
     motorcontrols[1] = mpu6050_x_axis;
     motorcontrols[3] = 2;
   //Going Right
   } else if (a.acceleration.x < 0) {
      Serial.println("Going right");
-     mpu6050_x_axis = map((a.acceleration.x)*-1, 0, mpu6050_max_value, 0, motor_maxspeed);
+     mpu6050_x_axis = map((a.acceleration.x)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
      motorcontrols[1] = mpu6050_x_axis;
      motorcontrols[3] = 1;
   }
   //Going Backwards
   if (a.acceleration.y >= 0) {
      Serial.println("Going backwards");
-     mpu6050_y_axis = map(a.acceleration.y, 0, mpu6050_max_value, 0, motor_maxspeed);
+     mpu6050_y_axis = map(a.acceleration.y*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
      motorcontrols[0] = mpu6050_y_axis;
      motorcontrols[2] = 2;
   // Going forward
   } else if (a.acceleration.y < 0) {
       Serial.println("Going forward ");
       Serial.println(a.acceleration.y);
-      mpu6050_y_axis = map((a.acceleration.y)*-1, 0, mpu6050_max_value, 0, motor_maxspeed);
+      mpu6050_y_axis = map((a.acceleration.y)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
       motorcontrols[0] = mpu6050_y_axis;
       motorcontrols[2] = 1; 
   }
@@ -261,5 +260,5 @@ void loop()
   //Send message to receiver
   radio.write(&motorcontrols, sizeof(motorcontrols));
   
-  delay(50); //60hz
+  delay(100); //60hz
 }
