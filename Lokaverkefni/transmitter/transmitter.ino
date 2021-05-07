@@ -156,6 +156,9 @@ void loop()
   joystick.update_data(x_axis, y_axis, joystick_button_state);
   joystick.debug();
 
+  int myarr[3];
+  int *p = joystick.ret_array(myarr);
+
   //MPU 6050 sensors
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
