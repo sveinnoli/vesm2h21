@@ -87,22 +87,18 @@ MotorB(Right): IN3, IN4
 ```
 OFF:
 IN1: LOW
-
 IN2: LOW
 
 Backwards:
 IN1:HIGH
-
 IN2:LOW  
 
 Forward:
 IN1: LOW
-
 IN2: HIGH
 
 OFF:
 IN1: HIGH
-
 IN2: HIGH
 ```
 
