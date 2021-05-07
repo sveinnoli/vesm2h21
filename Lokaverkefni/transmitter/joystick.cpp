@@ -27,8 +27,8 @@ void Joystick::debug() {
 
 void Joystick::ret_array() {
     int myArray[3] = {};
-    myArray[0] = _x
-    myArray[1] = _y
-    myArray[2] = _button_state
+    myArray[0] = _x;
+    myArray[1] = _y;
+    myArray[2] = _button_state;
     return myArray;
 }
