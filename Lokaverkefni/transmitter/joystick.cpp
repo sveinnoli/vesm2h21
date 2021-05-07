@@ -6,11 +6,11 @@
 #include "Arduino.h"
 #include "Joystick.h"
 
-Joystick::Joystick(int x, int y, bool, button_state)
+Joystick::Joystick(int x, int y, bool button_state)
 {
     _x = x;
-    _y = y
-    _button_state = button_state
+    _y = y;
+    _button_state = button_state;
 }
 
 void Joystick::print_data() {

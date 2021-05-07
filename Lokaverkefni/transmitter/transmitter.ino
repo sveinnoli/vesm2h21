@@ -1,5 +1,6 @@
 #include <nRF24L01.h>
 #include <RF24.h>
+#include "Joystick.h"
 
 //MPU6050
 #include <Adafruit_MPU6050.h>
@@ -48,7 +49,6 @@ unsigned long debounceDelay = 50;
 uint8_t mpu6050_x_axis = 0; 
 uint8_t mpu6050_y_axis = 0;
 float mpu6050_max_value = 9.8;
-
 
 //create an RF24 object
 RF24 radio(9, 8);  // CE, CSN
@@ -144,6 +144,7 @@ void setup()
   //Configure the MPU6050
   mpu6050_config();
 
+
 }
 void loop()
 {
@@ -159,7 +160,7 @@ void loop()
 
 // Checks if mpu6050 has been turned on
   if (mpu6050_on){
-    // Here the data will be transmitted to the Master
+    // MPU6050
     Serial.print("Acceleration X: ");
   Serial.print(a.acceleration.x);
   Serial.print(", Y: ");
@@ -178,27 +179,22 @@ void loop()
 
   //Going Left
   if (a.acceleration.x >= 0) {
-    Serial.println("Going left");
     mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
     motorcontrols[1] = mpu6050_x_axis;
     motorcontrols[3] = 2;
   //Going Right
   } else if (a.acceleration.x < 0) {
-     Serial.println("Going right");
      mpu6050_x_axis = map((a.acceleration.x)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
      motorcontrols[1] = mpu6050_x_axis;
      motorcontrols[3] = 1;
   }
   //Going Backwards
   if (a.acceleration.y >= 0) {
-     Serial.println("Going backwards");
      mpu6050_y_axis = map(a.acceleration.y*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
      motorcontrols[0] = mpu6050_y_axis;
      motorcontrols[2] = 2;
   // Going forward
   } else if (a.acceleration.y < 0) {
-      Serial.println("Going forward ");
-      Serial.println(a.acceleration.y);
       mpu6050_y_axis = map((a.acceleration.y)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
       motorcontrols[0] = mpu6050_y_axis;
       motorcontrols[2] = 1; 
@@ -206,7 +202,7 @@ void loop()
   
     
   } else if (!mpu6050_on) {
-    //Joystick Data
+    //Joystick
   
     //Going Backwards
     if (joystick_direction_backwards(y_axis)){
