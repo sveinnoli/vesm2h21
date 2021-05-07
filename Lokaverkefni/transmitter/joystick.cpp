@@ -25,10 +25,3 @@ void Joystick::debug() {
   Serial.println(_button_state);
 }
 
-int* Joystick::ret_array(int *arr) {
-    int *arr;
-    arr[0] = _x;
-    arr[1] = _y;
-    arr[2] = _button_state;
-    return arr;
-}
