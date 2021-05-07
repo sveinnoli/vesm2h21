@@ -8,6 +8,7 @@
 
 Adafruit_MPU6050 mpu;
 
+Joystick joystick(0, 0, false);
 // Init joystick pins
 const int joystick_x = A0;
 const int joystick_y = A1;
@@ -152,7 +153,8 @@ void loop()
   x_axis = analogRead(joystick_x)/2;
   y_axis = analogRead(joystick_y)/2;
   joystick_button_state = digitalRead(joystick_button);
-
+  joystick.update_data(x_axis, y_axis, joystick_button_state);
+  joystick.print_data();
   //MPU 6050 sensors
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
