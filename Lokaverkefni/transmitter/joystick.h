@@ -13,7 +13,7 @@ class Joystick
 {
     public:
         Joystick(int x, int y, bool button_state);
-        void print_data();
+        void update();
     private:
         int _x;
         int _y;

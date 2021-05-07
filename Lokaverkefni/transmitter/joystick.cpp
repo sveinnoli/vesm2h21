@@ -13,6 +13,12 @@ Joystick::Joystick(int x, int y, bool button_state)
     _button_state = button_state;
 }
 
+void Joystick::update(new_x, new_y, new_button_state) {
+    _x = new_x;
+    _y = new_y;
+    _button_state = new_button_state;
+}
+
 void Joystick::print_data() {
     Serial.print(_x);
     Serial.print(_y);
