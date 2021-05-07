@@ -146,12 +146,14 @@ Motorcontrol[] =
 ```
 
 ## Dagbók
+#### 28/04 - 03/05
+Tengdi og setti bílinn saman.
 
 #### 03/05 - 04/05
-Setti up NRF tengin við bílinn og náði að millifæra array frá fjarstýringunni til bíllsins og náði einfaldu keyrslu (áfram og til baka).
+Tengdi fjarstýringu við brauðborð og Setti up NRF tengin við bílinn og náði að millifæra array frá fjarstýringunni til bíllsins og náði einfaldu keyrslu (áfram og til baka).
 
 #### 05/05
-Lagaði aðeins keyrsluna á bílnum og náði að láta MPU6050 virka.
+Náði að setja inn fulla keyrslu, áfram, vinstri, hægri og til baka með bæði MPU6050 og joystickið. Þarf enþá að refinea það til að ná nákvæmari og betri hreyfingar.
 
 ## Ýttri upplýsingar
 
