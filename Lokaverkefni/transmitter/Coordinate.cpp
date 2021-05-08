@@ -37,7 +37,7 @@ int* Coordinate::ret_array(int *arr) {
     return arr;
 }
 
-void Coordinate::direction(char[15] direction, int *arr, int center_offset, int max_value, uint8_t max_speed) {
+void Coordinate::get_directions(int *arr, int center_offset, int max_value, uint8_t max_speed) {
     //Forward
     if (_y > 0) {
         Serial.println("Going forward");
