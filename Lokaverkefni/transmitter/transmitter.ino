@@ -212,7 +212,6 @@ void loop()
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
-
     //Going Backwards
     if (joystick_direction_backwards(y_axis)){
       y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
