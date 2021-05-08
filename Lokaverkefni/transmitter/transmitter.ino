@@ -150,8 +150,8 @@ void setup()
 void loop()
 {
   //Joystick
-  x_axis = analogRead(joystick_x)/2;
-  y_axis = analogRead(joystick_y)/2;
+  x_axis = (analogRead(joystick_x)/2)-x_axis_center_offset;
+  y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
   joystick_button_state = digitalRead(joystick_button);
   coordinate.update_data(x_axis, y_axis, joystick_button_state);
   coordinate.debug();
