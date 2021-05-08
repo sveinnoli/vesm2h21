@@ -1,6 +1,6 @@
 #include <nRF24L01.h>
 #include <RF24.h>
-#include "Joystick.h"
+#include "Position.h"
 
 //MPU6050
 #include <Adafruit_MPU6050.h>
@@ -8,7 +8,7 @@
 
 Adafruit_MPU6050 mpu;
 
-Joystick joystick(0, 0, false);
+Position position(0, 0, false);
 // Init joystick pins
 const int joystick_x = A0;
 const int joystick_y = A1;
@@ -153,8 +153,8 @@ void loop()
   x_axis = analogRead(joystick_x)/2;
   y_axis = analogRead(joystick_y)/2;
   joystick_button_state = digitalRead(joystick_button);
-  joystick.update_data(x_axis, y_axis, joystick_button_state);
-  joystick.debug();
+  position.update_data(x_axis, y_axis, joystick_button_state);
+  position.debug();
 
   int myarr[3];
   int *p = joystick.ret_array(myarr);

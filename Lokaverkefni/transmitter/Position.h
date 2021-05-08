@@ -1,21 +1,22 @@
 /*
     Sveinn Oli, G.
-    Joystick library used to interact with the joystick and return directional control.
+    Position library used to interact with the Position and return directional control.
 */
 
-#ifndef Joystick_h
-#define Joystick_h
+#ifndef Position_h
+#define Position_h
 
 #include "Arduino.h"
 
 
-class Joystick
+class Position
 {
     public:
-        Joystick(int x, int y, bool button_state);
+        Position(int x, int y, bool button_state);
         void update_data(int new_x, int new_y, bool new_button_state);
         void debug();
         int* ret_array(int* arr);
+        
     private:
         int _x;
         int _y;
