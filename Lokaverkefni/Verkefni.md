@@ -125,6 +125,13 @@ Backwards: Y er +
 Left:      X er +
 Right:     X er -
 ```
+Þarf að leiðretta áttirnar þar sem MPU6050 verður að beina í serstaka átt þegar hún verður í fjarstýringunni þannig:
+```
+Forward:   X er -
+Backwards: X er +
+Right:     Y er +
+Left:      Y er -
+```
 ---
 
 ## Millifærsla
