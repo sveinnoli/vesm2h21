@@ -146,6 +146,17 @@ Motorcontrol[] =
 }
 ```
 
+Nýtt:
+```
+Motorcontrol[] = 
+{
+ 0 = y_axis
+ 1 = x_axis
+ 2 = [0 = forward, 1 = backwards]
+ 3 = [0 = right, 1 = left]
+}
+```
+
 ## Dagbók
 #### 28/04 - 03/05
 Tengdi og setti bílinn saman.
