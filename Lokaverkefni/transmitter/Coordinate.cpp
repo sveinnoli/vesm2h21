@@ -6,7 +6,7 @@
 #include "Arduino.h"
 #include "Coordinate.h"
 
-Coordinate::Coordinate(int x, int y, bool button_state, uint8_t orientation)
+Coordinate::Coordinate(float x, float y, bool button_state, uint8_t orientation)
 {
     _x = x;
     _y = y;
@@ -49,13 +49,8 @@ void Coordinate::get_directions(int *arr, int center_offset, int max_value, uint
     //Right
     if (_x > 0) {
         Serial.println("Going right");
-    } else if {
+    } else if (_x < 0) {
      //Left
         Serial.println("Going left");
     }
-
-
-
-
-   
 }
