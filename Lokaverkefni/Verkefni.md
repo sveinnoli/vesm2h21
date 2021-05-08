@@ -141,8 +141,8 @@ Motorcontrol[] =
 {
  0 = y_axis
  1 = x_axis
- 2 = [1 = forward, 2 = backwards]
- 3 = [1 = right, 2 = left]
+ 2 = [1 = forward | 2 = backwards]
+ 3 = [1 = right | 2 = left]
 }
 ```
 
@@ -152,8 +152,8 @@ Motorcontrol[] =
 {
  0 = y_axis
  1 = x_axis
- 2 = [0 = forward, 1 = backwards]
- 3 = [0 = right, 1 = left]
+ 2 = [0 = forward | 1 = backwards]
+ 3 = [0 = right | 1 = left]
 }
 ```
 
