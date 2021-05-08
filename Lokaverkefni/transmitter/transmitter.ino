@@ -152,8 +152,9 @@ void loop()
   mpu6050_current_button_state = digitalRead(mpu6050_button);
   coordinate.debug();
 
-  int myarr[3];
-  int *p = coordinate.ret_array(myarr);
+  uint8_t myarr[3];
+  //int *p = coordinate.ret_array(myarr);
+  uint8_t *p = coordinates.get_directions(myarr, 1, 1, 1);
 
 
 
@@ -211,29 +212,30 @@ void loop()
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
+
     //Going Backwards
     if (joystick_direction_backwards(y_axis)){
-      y_axis = map(y_axis-y_axis_center_offset, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
+      y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
       motorcontrols[0] = y_axis;
       motorcontrols[2] = 2;
       
   // Going Forward
     } else if (joystick_direction_forward(y_axis)) {
-      y_axis = map((y_axis-y_axis_center_offset)*-1, 0, y_axis_forward_max_value, 0, motor_maxspeed);
+      y_axis = map((y_axis)*-1, 0, y_axis_forward_max_value, 0, motor_maxspeed);
       motorcontrols[0] = y_axis;
       motorcontrols[2] = 1; 
     } 
     
     // Right
     if (joystick_direction_right(x_axis)){
-      x_axis = map(x_axis-x_axis_center_offset, 0, x_axis_right_max_value, 0, motor_maxspeed);
+      x_axis = map(x_axis, 0, x_axis_right_max_value, 0, motor_maxspeed);
       motorcontrols[1] = x_axis;
       motorcontrols[3] = 1;
       
     // Left
     } else if (joystick_direction_left(x_axis)) {
       Serial.println(x_axis);
-      x_axis = map((x_axis-x_axis_center_offset)*-1, 0, x_axis_left_max_value, 0, motor_maxspeed);  
+      x_axis = map((x_axis)*-1, 0, x_axis_left_max_value, 0, motor_maxspeed);  
       motorcontrols[1] = x_axis;
       motorcontrols[3] = 2;
     }
