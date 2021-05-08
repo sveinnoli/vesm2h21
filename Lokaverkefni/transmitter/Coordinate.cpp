@@ -18,7 +18,7 @@ void Coordinate::set_orientation(uint8_t new_orientation) {
     _orientation = new_orientation;
 }
 
-void Coordinate::update_data(int new_x, int new_y, bool new_button_state=1) {
+void Coordinate::update_data(int new_x, int new_y, bool new_button_state) {
     _x = new_x;
     _y = new_y;
     _button_state = new_button_state;
@@ -37,7 +37,7 @@ int* Coordinate::ret_array(int *arr) {
     return arr;
 }
 
-void Coordinate::get_directions(int *arr, int center_offset, int max_value, uint8_t max_speed) {
+void Coordinate::get_directions(uint8_t *arr, int center_offset, float max_value, uint8_t max_speed) {
     //Forward
     if (_y > 0) {
         Serial.println("Going forward");
