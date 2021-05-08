@@ -16,7 +16,7 @@ class Coordinate
         void update_data(int new_x, int new_y, bool new_button_state);
         void debug();
         int* ret_array(int* arr);
-        
+        int* direction(char[15] direction, int pos, int center_offset, int max_value, uint8_t max_speed);
     private:
         int _x;
         int _y;
