@@ -8,7 +8,7 @@
 
 Adafruit_MPU6050 mpu;
 
-Coordinate coordinate(0, 0, false);
+Coordinate coordinate(0, 0, true, 1);
 // Init joystick pins
 const int joystick_x = A0;
 const int joystick_y = A1;
