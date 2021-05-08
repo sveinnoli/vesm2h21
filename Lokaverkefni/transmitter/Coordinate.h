@@ -12,17 +12,17 @@
 class Coordinate
 {
     public:
-        Coordinate(int x, int y, bool button_state);
+        Coordinate(int x, int y, bool button_state, uint8_t orientation);
         void set_orientation(uint8_t orientation);
         void update_data(int new_x, int new_y, bool new_button_state);
         void debug();
         int* ret_array(int* arr);
-        
+       
     private:
         int _x;
         int _y;
         int _button_state;
-        int _orientation;
+        uint8_t _orientation;
 };
 
 #endif
