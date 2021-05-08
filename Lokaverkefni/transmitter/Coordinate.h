@@ -1,18 +1,18 @@
 /*
     Sveinn Oli, G.
-    Position library used to interact with the Position and return directional control.
+    Coordinate library used to interact with the Coordinate and return directional control.
 */
 
-#ifndef Position_h
-#define Position_h
+#ifndef Coordinate_h
+#define Coordinate_h
 
 #include "Arduino.h"
 
 
-class Position
+class Coordinate
 {
     public:
-        Position(int x, int y, bool button_state);
+        Coordinate(int x, int y, bool button_state);
         void update_data(int new_x, int new_y, bool new_button_state);
         void debug();
         int* ret_array(int* arr);
