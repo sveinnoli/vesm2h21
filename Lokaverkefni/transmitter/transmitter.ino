@@ -8,7 +8,7 @@
 
 Adafruit_MPU6050 mpu;
 
-Coordinate coordinate(0, 0);
+
 // Init joystick pins
 const int joystick_x = A0;
 const int joystick_y = A1;
@@ -53,6 +53,9 @@ float mpu6050_max_value = 9.8;
 
 //create an RF24 object
 RF24 radio(9, 8);  // CE, CSN
+
+//create coordinate object
+Coordinate coordinate(0, 0, motorcontrols); //X, Y, Array
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
@@ -153,7 +156,7 @@ void loop()
   coordinate.debug();
 
   uint8_t myarr[3];
-  uint8_t *p = coordinate.get_positional_data(myarr, 1, 1, 1);
+  uint8_t *p = coordinate.get_positional_data(1, 1, 1);
 
 
 
@@ -163,7 +166,7 @@ void loop()
     //MPU 6050 sensors
     sensors_event_t a, g, temp;
     mpu.getEvent(&a, &g, &temp);
-    coordinate.update_data(a.acceleration.x*100, a.acceleration.y*100);
+    
     Serial.print("Acceleration X: ");
     Serial.print(a.acceleration.x);
     Serial.print(", Y: ");
@@ -179,7 +182,7 @@ void loop()
     Serial.print(", Z: ");
     Serial.print(g.gyro.z);
     Serial.println(" rad/s");
-    uint8_t *p = coordinate.get_positional_data(motorcontrols, motor_maxspeed, mpu6050_max_value*100);
+    
     Serial.println(p[0]);
     Serial.println(p[1]);
     Serial.println(p[2]);
@@ -214,6 +217,7 @@ void loop()
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
+
     //Going Backwards
     if (joystick_direction_backwards(y_axis)){
       y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);

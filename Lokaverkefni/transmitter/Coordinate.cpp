@@ -6,10 +6,11 @@
 #include "Arduino.h"
 #include "Coordinate.h"
 
-Coordinate::Coordinate(int x, int y, uint8_t orientation, bool button_state)
+Coordinate::Coordinate(int x, int y, uint8_t *arr, uint8_t orientation, bool button_state)
 {
     _x = x;
     _y = y;
+    _arr = arr;
     _button_state = button_state;
     _orientation = orientation;
 }
@@ -57,28 +58,32 @@ void Coordinate::debug() {
   Serial.println(_button_state);
 }
 
-uint8_t* Coordinate::get_positional_data(uint8_t *arr, uint8_t to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
+uint8_t* Coordinate::get_positional_data(uint8_t to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
     correct_orientation();
     //Forward
     if (_y >= 0) {
         _y = map(_y, 0, a_max*f_max, 0, to_max);
         arr[2] = 0;
+        arr[0] = _y;
     } 
     //Backwards
     else if (_y < 0) {
         _y = map(_y*-1, 0, a_max*b_max, 0, to_max);
         arr[2] = 1;
+        arr[0] = _y;
     } 
 
     //Right
     if (_x >= 0) {
         _x = map(_x, 0, a_max*r_max, 0, to_max);
         arr[3] = 0;
+        arr[1] = _x;
     } 
     //Left
     else if (_x < 0) {
         _x = map(_x*-1, 0, a_max*l_max, 0, to_max);
         arr[3] = 1;
+        arr[1] = _x;
     }
     return arr;
 }
