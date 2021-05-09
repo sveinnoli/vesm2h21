@@ -2,6 +2,7 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 #include "Motor.h"
+#include "NewPing.h"
 
 //create an RF24 object
 RF24 radio(A0, 2);  // CE = A0, CSN = 2
@@ -18,6 +19,16 @@ int in4 = 4;
 
 //Motor settings
 uint8_t motorcontrols[4] = {};
+
+//Ultrasonic pins
+#define TRIGGER_PIN 6
+#define ECHO_PIN 6
+
+//Ultrasonic distance to activate crash prevention
+#define crash_distance 15  
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, 400);
+float duration, distance;
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
@@ -51,6 +62,21 @@ void motorB_set_speed(uint8_t motor_speed) {
   analogWrite(enB, motor_speed);
 }
 
+void crash_prevention(void) {
+    motorA_set_speed(120);
+    motorB_set_speed(120);
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+
+    delay(500);
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+    delay(1000);
+}
 
 void setup()
 {
@@ -73,6 +99,11 @@ void setup()
 
 void loop()
 {
+  distance = sonar.ping_cm();
+  if (distance < crash_distance) 
+  {
+    crash_prevention();
+  }
   //Read the data if available in buffer
   if (radio.available())
   {
