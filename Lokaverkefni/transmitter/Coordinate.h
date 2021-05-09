@@ -12,16 +12,15 @@
 class Coordinate
 {
     public:
-        Coordinate(float x, float y, bool button_state, uint8_t orientation);
+        Coordinate(int x, int y, uint8_t orientation=1, bool button_state=true);
         void set_orientation(uint8_t orientation);
         void correct_orientation();
         void update_data(int new_x, int new_y, bool new_button_state=1);
         void debug();
-        int* ret_array(int* arr);
-        uint8_t* get_directions(uint8_t* arr ,int center_offset, int max_value, uint8_t max_speed);
+        uint8_t* get_positional_data(uint8_t* arr, uint8_t to_max, int a_max=255,int f_max=1 int b_max=1, int r_max=1, int l_max=1);
     private:
-        float _x;
-        float _y;
+        int _x;
+        int _y;
         int _button_state;
         uint8_t _orientation;
 };

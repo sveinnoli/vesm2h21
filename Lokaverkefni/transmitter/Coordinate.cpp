@@ -6,7 +6,7 @@
 #include "Arduino.h"
 #include "Coordinate.h"
 
-Coordinate::Coordinate(float x, float y, bool button_state, uint8_t orientation)
+Coordinate::Coordinate(int x, int y, bool button_state, uint8_t orientation)
 {
     _x = x;
     _y = y;
@@ -19,7 +19,7 @@ void Coordinate::set_orientation(uint8_t new_orientation) {
 }
 
 void Coordinate::correct_orientation(void) {
-if (_orientation != 1) {
+    if (_orientation != 1) {
         // Axis is rotated 90° Clockwise
         if (_orientation == 2) {
             _x = _x*-1;
@@ -49,36 +49,36 @@ void Coordinate::update_data(int new_x, int new_y, bool new_button_state) {
 }
 
 void Coordinate::debug() {
+  Serial.print("X: ");  
   Serial.println(_x);  
+  Serial.print("Y: ");  
   Serial.println(_y);
+  Serial.print("Button State: ");  
   Serial.println(_button_state);
 }
 
-int* Coordinate::ret_array(int *arr) {
-    arr[0] = 1;
-    arr[1] = 2;
-    arr[2] = 3;
-    return arr;
-}
-
-uint8_t* Coordinate::get_directions(uint8_t *arr, int center_offset, int max_value, uint8_t max_speed) {
+uint8_t* Coordinate::get_positional_data(uint8_t *arr, uint8_t to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
     correct_orientation();
     //Forward
     if (_y >= 0) {
         arr[2] = 0;
+        _y = map(_y, 0, a_max*f_max, 0, to_max);
     } 
     //Backwards
     else if (_y < 0) {
         arr[2] = 1;
+        y_ = map(_y*-1, 0, a_max*b_max, 0, to_max);
     } 
 
     //Right
     if (_x >= 0) {
         arr[3] = 0;
+        _x = map(_x, 0, a_max*r_max, 0, to_max);
     } 
     //Left
     else if (_x < 0) {
         arr[3] = 1;
+        _x = map(_x*-1, 0, a_max*l_max, 0, to_max);
     }
     return arr;
 }

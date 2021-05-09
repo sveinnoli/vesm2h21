@@ -8,7 +8,7 @@
 
 Adafruit_MPU6050 mpu;
 
-Coordinate coordinate(0, 0, true, 1);
+Coordinate coordinate(0, 0);
 // Init joystick pins
 const int joystick_x = A0;
 const int joystick_y = A1;
@@ -153,8 +153,7 @@ void loop()
   coordinate.debug();
 
   uint8_t myarr[3];
-  //int *p = coordinate.ret_array(myarr);
-  uint8_t *p = coordinate.get_directions(myarr, 1, 1, 1);
+  uint8_t *p = coordinate.get_positional_data(myarr, 1, 1, 1);
 
 
 
@@ -164,8 +163,7 @@ void loop()
     //MPU 6050 sensors
     sensors_event_t a, g, temp;
     mpu.getEvent(&a, &g, &temp);
-    coordinate.update_data(a.acceleration.x, a.acceleration.y);
-
+    coordinate.update_data(a.acceleration.x*100, a.acceleration.y*100);
     Serial.print("Acceleration X: ");
     Serial.print(a.acceleration.x);
     Serial.print(", Y: ");
@@ -181,7 +179,11 @@ void loop()
     Serial.print(", Z: ");
     Serial.print(g.gyro.z);
     Serial.println(" rad/s");
-
+    uint8_t *p = coordinate.get_positional_data(motorcontrols, motor_maxspeed, mpu6050_max_value*100);
+    Serial.println(p[0]);
+    Serial.println(p[1]);
+    Serial.println(p[2]);
+    Serial.println(p[3]);
     //Going Left
     if (a.acceleration.x >= 0) {
       mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
