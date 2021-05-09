@@ -30,7 +30,8 @@ int y_axis_forward_max_value = 249;
 int y_axis_backwards_max_value = 262;
 
 //Motor settings
-uint8_t motorcontrols[4] = {};
+uint8_t motor_arr[4] = {};
+uint8_t *motorcontrols;
 uint8_t motor_maxspeed = 200;
 
 //Init MPU6050 pins
@@ -217,7 +218,17 @@ void loop()
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
-
+    motorcontrols = coordinate.get_positional_data
+    (
+      motorcontrols,                // Array for values
+      motor_maxspeed,               // Max speed
+      1,                            // 1 to set individual values on each max map values.
+      y_axis_forward_max_value,     // forward max
+      y_axis_backwards_max_value,   // backwards max
+      x_axis_right_max_value,       // right max
+      x_axis_left_max_value         // left max
+    );
+    /*
     //Going Backwards
     if (joystick_direction_backwards(y_axis)){
       y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
@@ -244,6 +255,7 @@ void loop()
       motorcontrols[1] = x_axis;
       motorcontrols[3] = 1;
     }
+    */
   Serial.print("\n");
     
   }
