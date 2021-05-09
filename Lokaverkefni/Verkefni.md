@@ -135,18 +135,6 @@ Left:      Y er -
 ---
 
 ## Millifærsla
-
-```
-Motorcontrol[] = 
-{
- 0 = y_axis
- 1 = x_axis
- 2 = [1 = forward | 2 = backwards]
- 3 = [1 = right | 2 = left]
-}
-```
-
-Nýtt:
 ```
 Motorcontrol[] = 
 {
