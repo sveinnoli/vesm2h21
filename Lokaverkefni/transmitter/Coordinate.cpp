@@ -57,7 +57,7 @@ void Coordinate::debug() {
   Serial.println(_button_state);
 }
 
-uint8_t Coordinate::convert_analog(int analog_signal, uint8_t axis, int center) {
+int Coordinate::convert_analog(int analog_signal, uint8_t axis, int center) {
     // Y-axis
     if (axis == 0) {
         return ((analog_signal/2)-center)*-1
