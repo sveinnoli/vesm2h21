@@ -1,6 +1,7 @@
 //Include Libraries
 #include <nRF24L01.h>
 #include <RF24.h>
+#include "Motor.h"
 
 //create an RF24 object
 RF24 radio(A0, 2);  // CE = A0, CSN = 2
