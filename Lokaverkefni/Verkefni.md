@@ -156,8 +156,7 @@ Tengdi fjarstýringu við brauðborð og Setti up NRF tengin við bílinn og ná
 Náði að setja inn fulla keyrslu, áfram, vinstri, hægri og til baka með bæði MPU6050 og joystickið. Þarf enþá að refinea það til að ná nákvæmari og betri hreyfingar.
 
 #### 06/05 - 09/05
-Búði til 'Coordinate' library sem tekur við analog gildum og coordinate gildum og breytir þeim í átt og hraða fyrir mótorinn. Það getur líka snúð við vígrum í 90
-180 og 270° clockwise til að einfalda ef það þarf að snúa við joystick eða mpu6050.
+Búði til 'Coordinate' library sem getur tekið við analog gildum og gildi sem nýta sér hnitakerfið eins og MPU6050 og breytir þeim í hraða og átt fyrir mótorina. Til að koma við hvernig joystickið og mpuið snýr þegar það er sett í fjarstýringuna gerði ég fall sem getur snúið við vígrum í 90, 180 og 270° clockwise til að koma við að það skyptir ekki máli hvernig það snýr.
 
 ## Ýttri upplýsingar
 
