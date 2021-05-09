@@ -92,50 +92,76 @@ void loop()
     // Right
     if (motorcontrols[3] == 0 and motorcontrols[1] > 75) {
       // Right + Forward
-      if (motorcontrols[2] == 0) {
+      if (motorcontrols[2] == 0 and motorcontrols[0] > 50) {
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
         digitalWrite(in3, LOW);
-        digitalWrite(in4, LOW); 
-        //Right + Backwards    
-      } else if (motorcontrols[2] == 1) {
+        digitalWrite(in4, LOW);   
+      } 
+      //Right + Backwards  
+      else if (motorcontrols[2] == 1 and motorcontrols[0] > 50) {
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
         digitalWrite(in4, LOW);       
      }
+     //Turning only to the right
+     else {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, HIGH);
+          digitalWrite(in3, HIGH);
+          digitalWrite(in4, LOW);
+          motorA_set_speed(120);
+          motorB_set_speed(120);  
+      }
+    } 
+
     // Left
-    } else if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
+    else if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
       //Left + Forward
-      if (motorcontrols[2] == 0){
+      if (motorcontrols[2] == 0 and motorcontrols[0] > 50) {
         digitalWrite(in1, LOW);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
-        digitalWrite(in4, HIGH); 
-        //Left + Backwards       
-      } else if (motorcontrols[2] == 1) {
+        digitalWrite(in4, HIGH);       
+      } 
+       //Left + Backwards 
+      else if (motorcontrols[2] == 1 and motorcontrols[0] > 50) {
           digitalWrite(in1, LOW);
           digitalWrite(in2, LOW);
           digitalWrite(in3, HIGH);
           digitalWrite(in4, LOW);        
       } 
+      // Turning only to the left
+      else {
+          digitalWrite(in1, HIGH);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, HIGH);
+          motorA_set_speed(120);
+          motorB_set_speed(120);  
+      }
     }
     
     else {
+
       //Forward
       if (motorcontrols[2] == 0) {
           digitalWrite(in1, LOW);
           digitalWrite(in2, HIGH);
           digitalWrite(in3, LOW);
           digitalWrite(in4, HIGH);        
-        // Backwards
-      } else if (motorcontrols[2] == 1) {
+      } 
+      // Backwards
+      else if (motorcontrols[2] == 1) {
           digitalWrite(in1, HIGH);
           digitalWrite(in2, LOW);
           digitalWrite(in3, HIGH);
           digitalWrite(in4, LOW);
       }
     }
+
+     
    
     delay(16.67); //60hz
   } 

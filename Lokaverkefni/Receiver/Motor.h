@@ -8,6 +8,11 @@
 
 #include "Arduino.h"
 
-
+class Motor
+{
+    public:
+        Motor();
+    private:
+};
 
 #endif
