@@ -98,10 +98,10 @@ void loop()
         digitalWrite(in4, LOW); 
         //Right + Backwards    
       } else if (motorcontrols[2] == 1) {
-        digitalWrite(in1, LOW);
+        digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
-        digitalWrite(in4, HIGH);       
+        digitalWrite(in4, LOW);       
      }
     // Left
     } else if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
