@@ -132,7 +132,14 @@ void loop()
     //MPU 6050 sensors
     sensors_event_t a, g, temp;
     mpu.getEvent(&a, &g, &temp);
-    
+    coordinate.update_data(a.acceleration.x*100, a.acceleration.y*100);
+    motor_p = coordinate.get_positional_data
+    (
+      motorcontrols,                // Array for values
+      motor_maxspeed,               // Max speed
+      mpu6050_max_value                           // 1 to set individual values on each max map values.
+    );
+
     Serial.print("Acceleration X: ");
     Serial.print(a.acceleration.x);
     Serial.print(", Y: ");
@@ -150,7 +157,7 @@ void loop()
     Serial.println(" rad/s");
     
   
-
+  /*
     //Going Left
     if (a.acceleration.x >= 0) {
       mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
@@ -173,13 +180,14 @@ void loop()
         motorcontrols[0] = mpu6050_y_axis;
         motorcontrols[2] = 0; 
     }
-  
+  */
 
   //Joystick
   } else if (!mpu6050_on) {
     x_axis = (analogRead(joystick_x)/2)-x_axis_center_offset;
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
+
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
     motor_p = coordinate.get_positional_data
     (
