@@ -6,7 +6,7 @@
 #include "Arduino.h"
 #include "Coordinate.h"
 
-Coordinate::Coordinate(int x, int y, bool button_state, uint8_t orientation)
+Coordinate::Coordinate(int x, int y, uint8_t orientation, bool button_state)
 {
     _x = x;
     _y = y;
