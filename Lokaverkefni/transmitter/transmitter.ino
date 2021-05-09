@@ -55,7 +55,7 @@ float mpu6050_max_value = 9.8;
 RF24 radio(9, 8);  // CE, CSN
 
 //create coordinate object
-Coordinate coordinate(0, 0, motorcontrols); //X, Y, Array
+Coordinate coordinate(0, 0); //X, Y
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
@@ -156,7 +156,7 @@ void loop()
   coordinate.debug();
 
   uint8_t myarr[3];
-  uint8_t *p = coordinate.get_positional_data(1, 1, 1);
+  uint8_t *p = coordinate.get_positional_data(myarr, 1, 1, 1);
 
 
 
