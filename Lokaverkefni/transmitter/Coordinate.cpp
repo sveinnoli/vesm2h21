@@ -57,17 +57,7 @@ void Coordinate::debug() {
   Serial.println(_button_state);
 }
 
-uint8_t Coordinate::convert_analog(int analog_signal, uint8_t axis, int center) {
-    // Y-axis
-    if (axis == 0) {
-        return ((analog_signal/2)-center)*-1
-    } 
-    // X-axis
-    else if (axis == 1) {
-        return ((analog_signal/2)-center)
-    }
-    
-}
+
 
 uint8_t* Coordinate::get_positional_data(uint8_t *arr, uint8_t to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
     correct_orientation();
