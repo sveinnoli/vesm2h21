@@ -30,8 +30,8 @@ int y_axis_forward_max_value = 249;
 int y_axis_backwards_max_value = 262;
 
 //Motor settings
-uint8_t motor_arr[4] = {};
-uint8_t *motorcontrols;
+uint8_t *motor_p;
+uint8_t motorcontrols[4] = {};
 uint8_t motor_maxspeed = 200;
 
 //Init MPU6050 pins
@@ -181,7 +181,7 @@ void loop()
     y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
     joystick_button_state = digitalRead(joystick_button);
     coordinate.update_data(x_axis, y_axis, joystick_button_state);
-    motorcontrols = coordinate.get_positional_data
+    motor_p = coordinate.get_positional_data
     (
       motorcontrols,                // Array for values
       motor_maxspeed,               // Max speed
@@ -217,7 +217,7 @@ void loop()
 
 
   //Send message to receiver
-  radio.write(&motor_arr, sizeof(motor_arr);
+  radio.write(&motorcontrols, sizeof(motorcontrols));
   
   delay(100); //60hz
 }
