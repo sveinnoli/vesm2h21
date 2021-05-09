@@ -144,10 +144,6 @@ void loop()
     
   //Joystick
   } else if (!mpu6050_on) {
-    /*
-    x_axis = (analogRead(joystick_x)/2)-x_axis_center_offset;
-    y_axis = ((analogRead(joystick_y)/2)-y_axis_center_offset)*-1;
-    */
     x_axis = coordinate.convert_analog(analogRead(joystick_x), 1, x_axis_center_offset);
     y_axis = coordinate.convert_analog(analogRead(joystick_y), 0, y_axis_center_offset);
 
