@@ -217,8 +217,11 @@ void loop()
       // Switch the mpu 6050 ON or OFF
       if (mpu6050_button_state == LOW) {
           mpu6050_on = !mpu6050_on;
-          coordinate.set_orientation(2);
-      }
+          if (coordinate._orientation == 2) {
+             coordinate.set_orientation(1);
+          } else {
+            coordinate.set_orientation(2);
+      }   } 
     } 
   }
   mpu6050_last_button_state = mpu6050_current_button_state;
