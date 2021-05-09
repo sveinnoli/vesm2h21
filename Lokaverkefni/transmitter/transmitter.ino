@@ -186,23 +186,23 @@ void loop()
     if (a.acceleration.x >= 0) {
       mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
       motorcontrols[1] = mpu6050_x_axis;
-      motorcontrols[3] = 2;
+      motorcontrols[3] = 1;
     //Going Right
     } else if (a.acceleration.x < 0) {
       mpu6050_x_axis = map((a.acceleration.x)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
       motorcontrols[1] = mpu6050_x_axis;
-      motorcontrols[3] = 1;
+      motorcontrols[3] = 0;
     }
     //Going Backwards
     if (a.acceleration.y >= 0) {
       mpu6050_y_axis = map(a.acceleration.y*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
       motorcontrols[0] = mpu6050_y_axis;
-      motorcontrols[2] = 2;
+      motorcontrols[2] = 1;
     // Going forward
     } else if (a.acceleration.y < 0) {
         mpu6050_y_axis = map((a.acceleration.y)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
         motorcontrols[0] = mpu6050_y_axis;
-        motorcontrols[2] = 1; 
+        motorcontrols[2] = 0; 
     }
   
 
@@ -216,27 +216,27 @@ void loop()
     if (joystick_direction_backwards(y_axis)){
       y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
       motorcontrols[0] = y_axis;
-      motorcontrols[2] = 2;
+      motorcontrols[2] = 1;
       
   // Going Forward
     } else if (joystick_direction_forward(y_axis)) {
       y_axis = map((y_axis)*-1, 0, y_axis_forward_max_value, 0, motor_maxspeed);
       motorcontrols[0] = y_axis;
-      motorcontrols[2] = 1; 
+      motorcontrols[2] = 0; 
     } 
     
     // Right
     if (joystick_direction_right(x_axis)){
       x_axis = map(x_axis, 0, x_axis_right_max_value, 0, motor_maxspeed);
       motorcontrols[1] = x_axis;
-      motorcontrols[3] = 1;
+      motorcontrols[3] = 0;
       
     // Left
     } else if (joystick_direction_left(x_axis)) {
       Serial.println(x_axis);
       x_axis = map((x_axis)*-1, 0, x_axis_left_max_value, 0, motor_maxspeed);  
       motorcontrols[1] = x_axis;
-      motorcontrols[3] = 2;
+      motorcontrols[3] = 1;
     }
   Serial.print("\n");
     

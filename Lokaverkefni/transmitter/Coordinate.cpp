@@ -20,19 +20,19 @@ void Coordinate::set_orientation(uint8_t new_orientation) {
 
 void Coordinate::correct_orientation(void) {
 if (_orientation != 1) {
-        // Rotated 90° Clockwise
+        // Axis is rotated 90° Clockwise
         if (_orientation == 2) {
             _x = _x*-1;
             _x = _x + _y;
             _y = _x - _y;
             _x = _x - _y;
         } 
-        // Rotated 180° Clockwise
+        // Axis is rotated 180° 
         else if (_orientation == 3) {
             _x = _x*-1;
             _y = _y*-1;
         }
-        // Rotated 270° Clockwise
+        // Axis is rotated 90° counterclockwise
         else if (_orientation == 4) {
             _x = _x + _y;
             _y = _x - _y;
@@ -62,23 +62,23 @@ int* Coordinate::ret_array(int *arr) {
 }
 
 uint8_t* Coordinate::get_directions(uint8_t *arr, int center_offset, int max_value, uint8_t max_speed) {
-    
+    correct_orientation();
     //Forward
-    if (_y > 0) {
+    if (_y >= 0) {
         arr[2] = 0;
-    } else if (_y < 0) {
-     //Backwards
+    } 
+    //Backwards
+    else if (_y < 0) {
         arr[2] = 1;
     } 
 
     //Right
-    if (_x > 0) {
+    if (_x >= 0) {
         arr[3] = 0;
-    } else if (_x < 0) {
-     //Left
+    } 
+    //Left
+    else if (_x < 0) {
         arr[3] = 1;
     }
-    // After based on our orientation we configure the values which were set to a different mode 
-    // if we are in a different mode than 1 so we can check by simply checking if it is false becuase 1 = true
     return arr;
 }

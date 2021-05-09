@@ -89,30 +89,30 @@ void loop()
  
     
     // Right
-    if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
+    if (motorcontrols[3] == 0 and motorcontrols[1] > 75) {
       // Right + Forward
-      if (motorcontrols[2] == 1) {
+      if (motorcontrols[2] == 0) {
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
         digitalWrite(in3, LOW);
         digitalWrite(in4, LOW); 
         //Right + Backwards    
-      } else if (motorcontrols[2] == 2) {
+      } else if (motorcontrols[2] == 1) {
         digitalWrite(in1, LOW);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
         digitalWrite(in4, HIGH);       
      }
     // Left
-    } else if (motorcontrols[3] == 2 and motorcontrols[1] > 75) {
+    } else if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
       //Left + Forward
-      if (motorcontrols[2] == 1){
+      if (motorcontrols[2] == 0){
         digitalWrite(in1, LOW);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
         digitalWrite(in4, HIGH); 
         //Left + Backwards       
-      } else if (motorcontrols[2] == 2) {
+      } else if (motorcontrols[2] == 1) {
           digitalWrite(in1, LOW);
           digitalWrite(in2, LOW);
           digitalWrite(in3, HIGH);
@@ -122,13 +122,13 @@ void loop()
     
     else {
       //Forward
-      if (motorcontrols[2] == 1) {
+      if (motorcontrols[2] == 0) {
           digitalWrite(in1, LOW);
           digitalWrite(in2, HIGH);
           digitalWrite(in3, LOW);
           digitalWrite(in4, HIGH);        
         // Backwards
-      } else if (motorcontrols[2] == 2) {
+      } else if (motorcontrols[2] == 1) {
           digitalWrite(in1, HIGH);
           digitalWrite(in2, LOW);
           digitalWrite(in3, HIGH);
