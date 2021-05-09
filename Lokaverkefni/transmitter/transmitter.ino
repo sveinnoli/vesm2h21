@@ -103,35 +103,6 @@ void set_pinmode(void) {
   pinMode(mpu6050_button, INPUT_PULLUP);  
 }
 
-//Joystick directions
-bool joystick_direction_backwards(int y_axis) {
-  if (y_axis > y_axis_center_offset) {
-    return true;  
-  }
-  return false;
-}
-
-bool joystick_direction_forward(int y_axis) {
-  if (y_axis <= y_axis_center_offset) {
-    return true;  
-  }  
-  return false;
-}
-
-bool joystick_direction_right(int x_axis) {
-  if (x_axis >= x_axis_center_offset) {
-    return true;
-  }  
-  return false; 
-}
-
-bool joystick_direction_left(int x_axis) {
-  if (x_axis < x_axis_center_offset) {
-    return true;  
-  }  
-  return false;
-}
-
 void setup()
 {
   //Configure pinmode
@@ -156,12 +127,6 @@ void loop()
   mpu6050_current_button_state = digitalRead(mpu6050_button);
   coordinate.debug();
 
-  uint8_t myarr[3];
-  uint8_t *p = coordinate.get_positional_data(myarr, 1, 1, 1);
-
-
-
-
 // Checks if mpu6050 has been turned on
   if (mpu6050_on){
     //MPU 6050 sensors
@@ -184,10 +149,8 @@ void loop()
     Serial.print(g.gyro.z);
     Serial.println(" rad/s");
     
-    Serial.println(p[0]);
-    Serial.println(p[1]);
-    Serial.println(p[2]);
-    Serial.println(p[3]);
+  
+
     //Going Left
     if (a.acceleration.x >= 0) {
       mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
@@ -228,34 +191,7 @@ void loop()
       x_axis_right_max_value,       // right max
       x_axis_left_max_value         // left max
     );
-    /*
-    //Going Backwards
-    if (joystick_direction_backwards(y_axis)){
-      y_axis = map(y_axis, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
-      motorcontrols[0] = y_axis;
-      motorcontrols[2] = 1;
-      
-  // Going Forward
-    } else if (joystick_direction_forward(y_axis)) {
-      y_axis = map((y_axis)*-1, 0, y_axis_forward_max_value, 0, motor_maxspeed);
-      motorcontrols[0] = y_axis;
-      motorcontrols[2] = 0; 
-    } 
-    
-    // Right
-    if (joystick_direction_right(x_axis)){
-      x_axis = map(x_axis, 0, x_axis_right_max_value, 0, motor_maxspeed);
-      motorcontrols[1] = x_axis;
-      motorcontrols[3] = 0;
-      
-    // Left
-    } else if (joystick_direction_left(x_axis)) {
-      Serial.println(x_axis);
-      x_axis = map((x_axis)*-1, 0, x_axis_left_max_value, 0, motor_maxspeed);  
-      motorcontrols[1] = x_axis;
-      motorcontrols[3] = 1;
-    }
-    */
+
   Serial.print("\n");
     
   }
@@ -281,7 +217,7 @@ void loop()
 
 
   //Send message to receiver
-  radio.write(&motorcontrols, sizeof(motorcontrols));
+  radio.write(&motor_arr, sizeof(motor_arr);
   
   delay(100); //60hz
 }
