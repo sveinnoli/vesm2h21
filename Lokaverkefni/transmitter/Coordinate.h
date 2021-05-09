@@ -14,10 +14,11 @@ class Coordinate
     public:
         Coordinate(float x, float y, bool button_state, uint8_t orientation);
         void set_orientation(uint8_t orientation);
+        void correct_orientation();
         void update_data(int new_x, int new_y, bool new_button_state=1);
         void debug();
         int* ret_array(int* arr);
-        uint8_t* get_directions(int* arr ,int center_offset, int max_value, uint8_t max_speed);
+        uint8_t* get_directions(uint8_t* arr ,int center_offset, int max_value, uint8_t max_speed);
     private:
         float _x;
         float _y;

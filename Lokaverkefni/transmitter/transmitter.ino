@@ -154,7 +154,7 @@ void loop()
 
   uint8_t myarr[3];
   //int *p = coordinate.ret_array(myarr);
-  uint8_t *p = coordinates.get_directions(myarr, 1, 1, 1);
+  uint8_t *p = coordinate.get_directions(myarr, 1, 1, 1);
 
 
 

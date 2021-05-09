@@ -18,6 +18,30 @@ void Coordinate::set_orientation(uint8_t new_orientation) {
     _orientation = new_orientation;
 }
 
+void Coordinate::correct_orientation(void) {
+if (_orientation != 1) {
+        // Rotated 90° Clockwise
+        if (_orientation == 2) {
+            _x = _x*-1;
+            _x = _x + _y;
+            _y = _x - _y;
+            _x = _x - _y;
+        } 
+        // Rotated 180° Clockwise
+        else if (_orientation == 3) {
+            _x = _x*-1;
+            _y = _y*-1;
+        }
+        // Rotated 270° Clockwise
+        else if (_orientation == 4) {
+            _x = _x + _y;
+            _y = _x - _y;
+            _x = _x - _y;
+            _x = -_x;
+        }
+    }
+}
+
 void Coordinate::update_data(int new_x, int new_y, bool new_button_state) {
     _x = new_x;
     _y = new_y;
@@ -37,26 +61,24 @@ int* Coordinate::ret_array(int *arr) {
     return arr;
 }
 
-uint8_t* Coordinate::get_directions(int *arr, int center_offset, int max_value, uint8_t max_speed) {
+uint8_t* Coordinate::get_directions(uint8_t *arr, int center_offset, int max_value, uint8_t max_speed) {
+    
     //Forward
     if (_y > 0) {
-        arr[2] = 1;
+        arr[2] = 0;
     } else if (_y < 0) {
      //Backwards
-        arr[2] = 2;
+        arr[2] = 1;
     } 
 
     //Right
     if (_x > 0) {
-        arr[3] = 1;
+        arr[3] = 0;
     } else if (_x < 0) {
      //Left
-        arr[3] = 2;
+        arr[3] = 1;
     }
     // After based on our orientation we configure the values which were set to a different mode 
     // if we are in a different mode than 1 so we can check by simply checking if it is false becuase 1 = true
-    if (_orientation != 1) {
-        Serial.println("Mode 1");
-    }
     return arr;
 }
