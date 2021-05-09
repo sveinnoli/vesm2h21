@@ -90,7 +90,7 @@ void loop()
  
     
     // Right
-    if (motorcontrols[3] == 0 and motorcontrols[1] > 75) {
+    if (motorcontrols[3] == 0 and motorcontrols[1] > 100) {
       // Right + Forward
       if (motorcontrols[2] == 0 and motorcontrols[0] > 50) {
         digitalWrite(in1, LOW);
@@ -117,7 +117,7 @@ void loop()
     } 
 
     // Left
-    else if (motorcontrols[3] == 1 and motorcontrols[1] > 75) {
+    else if (motorcontrols[3] == 1 and motorcontrols[1] > 100) {
       //Left + Forward
       if (motorcontrols[2] == 0 and motorcontrols[0] > 50) {
         digitalWrite(in1, LOW);
