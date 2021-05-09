@@ -57,7 +57,7 @@ void Coordinate::debug() {
   Serial.println(_button_state);
 }
 
-uint8_t* Coordinate::get_positional_data(uint8_t *arr, uint8_t to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
+uint8_t* Coordinate::get_positional_data(uint8_t *arr, float to_max, int a_max, int f_max, int b_max, int r_max, int l_max ) {
     correct_orientation();
     //Forward
     if (_y >= 0) {
@@ -84,5 +84,13 @@ uint8_t* Coordinate::get_positional_data(uint8_t *arr, uint8_t to_max, int a_max
         arr[3] = 1;
         arr[1] = _x;
     }
+    if (arr[0] > to_max) {
+        arr[0] == to_max;
+    }
+
+    if (arr[1] > to_max) {
+        arr[1] == to_max;
+    }
+
     return arr;
 }
