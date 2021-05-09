@@ -139,6 +139,10 @@ void loop()
       motor_maxspeed,               // Max speed
       mpu6050_max_value*100                           // 1 to set individual values on each max map values.
     );
+    Serial.println("-----");
+    Serial.println(motorcontrols[2]);
+    Serial.println(motorcontrols[3]);
+    Serial.println("----");
 
     Serial.print("Acceleration X: ");
     Serial.print(a.acceleration.x);
