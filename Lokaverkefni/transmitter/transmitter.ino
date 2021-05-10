@@ -1,12 +1,13 @@
 #include <nRF24L01.h>
 #include <RF24.h>
-#include "Joystick.h"
+#include "Coordinate.h"
 
 //MPU6050
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 
 Adafruit_MPU6050 mpu;
+
 
 // Init joystick pins
 const int joystick_x = A0;
@@ -17,6 +18,7 @@ const int joystick_button = 2;
 int x_axis = 0;
 int y_axis = 0;
 int joystick_button_state = 0;
+uint8_t joystick_orientation = 1;
 
 //Joystick x and y axis offset
 int x_axis_center_offset = 266; // 256+10 center+offset
@@ -29,6 +31,7 @@ int y_axis_forward_max_value = 249;
 int y_axis_backwards_max_value = 262;
 
 //Motor settings
+uint8_t *motor_p;
 uint8_t motorcontrols[4] = {};
 uint8_t motor_maxspeed = 200;
 
@@ -48,10 +51,14 @@ unsigned long debounceDelay = 50;
 //MPU6050 axis controls
 uint8_t mpu6050_x_axis = 0; 
 uint8_t mpu6050_y_axis = 0;
+uint8_t mpu6050_orientation = 2;
 float mpu6050_max_value = 9.8;
 
 //create an RF24 object
 RF24 radio(9, 8);  // CE, CSN
+
+//create coordinate object
+Coordinate coordinate(0, 0); //X, Y
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
@@ -98,35 +105,6 @@ void set_pinmode(void) {
   pinMode(mpu6050_button, INPUT_PULLUP);  
 }
 
-//Joystick directions
-bool joystick_direction_backwards(int y_axis) {
-  if (y_axis > y_axis_center_offset) {
-    return true;  
-  }
-  return false;
-}
-
-bool joystick_direction_forward(int y_axis) {
-  if (y_axis <= y_axis_center_offset) {
-    return true;  
-  }  
-  return false;
-}
-
-bool joystick_direction_right(int x_axis) {
-  if (x_axis >= x_axis_center_offset) {
-    return true;
-  }  
-  return false; 
-}
-
-bool joystick_direction_left(int x_axis) {
-  if (x_axis < x_axis_center_offset) {
-    return true;  
-  }  
-  return false;
-}
-
 void setup()
 {
   //Configure pinmode
@@ -148,88 +126,41 @@ void setup()
 }
 void loop()
 {
-  //Joystick
-  x_axis = analogRead(joystick_x)/2;
-  y_axis = analogRead(joystick_y)/2;
-  joystick_button_state = digitalRead(joystick_button);
-
-  //MPU 6050 sensors
-  sensors_event_t a, g, temp;
-  mpu.getEvent(&a, &g, &temp);
   mpu6050_current_button_state = digitalRead(mpu6050_button);
+  coordinate.debug();
 
 // Checks if mpu6050 has been turned on
   if (mpu6050_on){
-    // MPU6050
-    Serial.print("Acceleration X: ");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y: ");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z: ");
-  Serial.print(a.acceleration.z);
-  Serial.println(" m/s^2");
-
-  Serial.print("Rotation X: ");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y: ");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z: ");
-  Serial.print(g.gyro.z);
-  Serial.println(" rad/s");
-
-  //Going Left
-  if (a.acceleration.x >= 0) {
-    mpu6050_x_axis = map(a.acceleration.x*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
-    motorcontrols[1] = mpu6050_x_axis;
-    motorcontrols[3] = 2;
-  //Going Right
-  } else if (a.acceleration.x < 0) {
-     mpu6050_x_axis = map((a.acceleration.x)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
-     motorcontrols[1] = mpu6050_x_axis;
-     motorcontrols[3] = 1;
-  }
-  //Going Backwards
-  if (a.acceleration.y >= 0) {
-     mpu6050_y_axis = map(a.acceleration.y*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
-     motorcontrols[0] = mpu6050_y_axis;
-     motorcontrols[2] = 2;
-  // Going forward
-  } else if (a.acceleration.y < 0) {
-      mpu6050_y_axis = map((a.acceleration.y)*-1*100, 0, mpu6050_max_value*100, 0, motor_maxspeed);
-      motorcontrols[0] = mpu6050_y_axis;
-      motorcontrols[2] = 1; 
-  }
-  
+    //MPU 6050 sensors
+    sensors_event_t a, g, temp;
+    mpu.getEvent(&a, &g, &temp);
+    coordinate.update_data(a.acceleration.x*100, a.acceleration.y*100);
+    motor_p = coordinate.get_positional_data
+    (
+      motorcontrols,                // Array for values
+      motor_maxspeed,               // Max speed
+      mpu6050_max_value*100         // Set all max values for map                    
+    );
     
+  //Joystick
   } else if (!mpu6050_on) {
-    //Joystick
-  
-    //Going Backwards
-    if (joystick_direction_backwards(y_axis)){
-      y_axis = map(y_axis-y_axis_center_offset, 0, y_axis_backwards_max_value, 0, motor_maxspeed);
-      motorcontrols[0] = y_axis;
-      motorcontrols[2] = 2;
-      
-  // Going Forward
-  } else if (joystick_direction_forward(y_axis)) {
-      y_axis = map((y_axis-y_axis_center_offset)*-1, 0, y_axis_forward_max_value, 0, motor_maxspeed);
-      motorcontrols[0] = y_axis;
-      motorcontrols[2] = 1; 
-    } 
-    
-    // Right
-    if (joystick_direction_right(x_axis)){
-      x_axis = map(x_axis-x_axis_center_offset, 0, x_axis_right_max_value, 0, motor_maxspeed);
-      motorcontrols[1] = x_axis;
-      motorcontrols[3] = 1;
-      
-    // Left
-    } else if (joystick_direction_left(x_axis)) {
-      Serial.println(x_axis);
-      x_axis = map((x_axis-x_axis_center_offset)*-1, 0, x_axis_left_max_value, 0, motor_maxspeed);  
-      motorcontrols[1] = x_axis;
-      motorcontrols[3] = 2;
-    }
+    x_axis = coordinate.convert_analog(analogRead(joystick_x), 1, x_axis_center_offset);
+    y_axis = coordinate.convert_analog(analogRead(joystick_y), 0, y_axis_center_offset);
+
+    joystick_button_state = digitalRead(joystick_button);
+
+    coordinate.update_data(x_axis, y_axis, joystick_button_state);
+    motor_p = coordinate.get_positional_data
+    (
+      motorcontrols,                // Array for values
+      motor_maxspeed,               // Max speed
+      1,                            // 1 to set individual values on each max map values.
+      y_axis_forward_max_value,     // forward max
+      y_axis_backwards_max_value,   // backwards max
+      x_axis_right_max_value,       // right max
+      x_axis_left_max_value         // left max
+    );
+
   Serial.print("\n");
     
   }
@@ -247,7 +178,11 @@ void loop()
       // Switch the mpu 6050 ON or OFF
       if (mpu6050_button_state == LOW) {
           mpu6050_on = !mpu6050_on;
-      }
+          if (coordinate._orientation == mpu6050_orientation) {
+             coordinate.set_orientation(joystick_orientation);
+          } else {
+            coordinate.set_orientation(mpu6050_orientation);
+      }   } 
     } 
   }
   mpu6050_last_button_state = mpu6050_current_button_state;
