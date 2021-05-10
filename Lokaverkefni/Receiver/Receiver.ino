@@ -100,8 +100,7 @@ void setup()
 void loop()
 {
   distance = sonar.ping_cm();
-  if (distance < crash_distance) 
-  {
+  if (distance < crash_distance) {
     crash_prevention();
   }
   //Read the data if available in buffer

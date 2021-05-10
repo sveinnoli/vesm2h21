@@ -11,8 +11,11 @@
 class Motor
 {
     public:
-        Motor();
+        Motor(uint8_t *motorcontrols);
     private:
+        uint8_t *motorcontrols;
+        int _x;
+        int _y;
 };
 
 #endif

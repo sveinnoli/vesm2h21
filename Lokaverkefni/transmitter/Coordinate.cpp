@@ -10,8 +10,8 @@ Coordinate::Coordinate(int x, int y, uint8_t orientation, bool button_state)
 {
     _x = x;
     _y = y;
-    _button_state = button_state;
     _orientation = orientation;
+    _button_state = button_state;
 }
 
 void Coordinate::set_orientation(uint8_t new_orientation) {
