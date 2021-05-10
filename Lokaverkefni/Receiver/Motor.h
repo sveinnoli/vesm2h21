@@ -4,7 +4,7 @@
 */
 
 #ifndef Motor_h
-#define Motor.h
+#define Motor_h
 
 #include "Arduino.h"
 
