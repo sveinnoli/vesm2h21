@@ -186,7 +186,7 @@ Náði að setja inn fulla keyrslu, áfram, vinstri, hægri og til baka með bæ
 Búði til 'Coordinate' library sem getur tekið við analog gildum og gildi sem nýta sér hnitakerfið eins og MPU6050 og breytir þeim í hraða og átt fyrir mótorina. Til að koma við hvernig joystickið og mpuið snýr þegar það er sett í fjarstýringuna gerði ég fall sem getur snúið við vígrum í 90, 180 og 270° clockwise til að koma við að það skiptir ekki máli hvernig það snýr.
 
 #### 09/05 - 10/05
-Bæti við árekstrarvörn
+Bætti við árekstrarvörn
 
 ## Ýttri upplýsingar
 
