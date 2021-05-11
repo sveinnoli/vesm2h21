@@ -188,6 +188,9 @@ Búði til 'Coordinate' library sem getur tekið við analog gildum og gildi sem
 #### 09/05 - 10/05
 Bætti við árekstrarvörn
 
+#### 10/05 - 12/05 
+Lóðaði saman fjarstýringuna.
+
 ## Ýttri upplýsingar
 
 ### Hnitakerfi:
