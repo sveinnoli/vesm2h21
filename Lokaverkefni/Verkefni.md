@@ -24,21 +24,49 @@ MotorB: Hægri
 ---
 
 ## Tengingar
-### Motor Driver
-!BÆTA VIÐ TÖFLU
 
-> ENA: Purple - 3 
-> 
-> IN4: Blue - 4
-> 
-> IN3: green - 5
-> 
-> IN2: yellow - 7
-> 
-> IN1: orange - 8
-> 
-> ENB: red - 9
+### Joystick
+```
+VCC  - 5V
+GND  - GND
+VRX  - A0
+VRY  - A1
+SW   - D2
+```
 
+### NRF24
+```
+VCC  - 5V
+GND  - GND
+CE   - D9
+CSN  - D8
+SCK  - D13
+MOSI - D11
+MISO - D12
+```
+
+### MPU6050
+```
+VCC - 3.3V
+GND - GND
+SCL - A5
+XDA - A4
+```
+
+### Motor driver
+```
+ENA - 3 
+
+IN4 - 4
+
+IN3 - 5
+
+IN2 - 7
+
+IN1 - 8
+
+ENB - 9
+```
 ---
 
 ## Steering
