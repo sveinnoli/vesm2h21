@@ -104,14 +104,26 @@ Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæð
 Til að breyta þessum tölum yfir í prósentar einíngu fyrir max_speed notum við map() fallið t.d. map(x gildi, 0, 255, 0, max_speed)
 Þetta breytir öllum gildum yfir 0-255 yfir í 0 til hraðan sem við ákveðum sem max hraða. Þar sem joystickið er ekki með nákvæmlega 256 tölur fyrir hvern ás líklega vegna framleiðanda galla er þetta mjög þægilegt.
 
+### 2. MPU 6050
 
-### Motor Driver
+Til að nota MPU6050 til að stjórna fjarstýringu þarf að taka inn acceleration á X, Y ásinum. 
+Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -
+```
+Forward:   Y er -
+Backwards: Y er +
+Left:      X er +
+Right:     X er -
+```
+Þarf að leiðretta áttirnar þar sem MPU6050 verður að beina í serstaka átt þegar hún verður í fjarstýringunni þannig:
+```
+Forward:   X er -
+Backwards: X er +
+Right:     Y er +
+Left:      Y er -
+```
+
+### 3. Motor Driver
 Conditions for turning off motors, going forward and backwards.
-
-MotorA(Left): IN1, IN2
-
-MotorB(Right): IN3, IN4
-
 ```
 OFF:
 IN1: LOW
@@ -143,23 +155,10 @@ IN3=LOW, IN4=HIGH
 
 Það er líka hægt að hafa bæði dekkin snúa í sama átt en hafa dekkin á það hlið sem er verið að snúa í vera með mun minni PWM set í það en anstæða hliðin sem er verið að snúa í.
 
-### 2. MPU 6050
+MotorA(Left): IN1, IN2
 
-Til að nota MPU6050 til að stjórna fjarstýringu þarf að taka inn acceleration á X, Y ásinum. 
-Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -
-```
-Forward:   Y er -
-Backwards: Y er +
-Left:      X er +
-Right:     X er -
-```
-Þarf að leiðretta áttirnar þar sem MPU6050 verður að beina í serstaka átt þegar hún verður í fjarstýringunni þannig:
-```
-Forward:   X er -
-Backwards: X er +
-Right:     Y er +
-Left:      Y er -
-```
+MotorB(Right): IN3, IN4
+
 ---
 
 ## Millifærsla
