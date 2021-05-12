@@ -187,21 +187,3 @@ Bætti við árekstrarvörn
 
 #### 10/05 - 12/05 
 Lóðaði saman fjarstýringuna og náði almenilega virkni.
-
-## Ýttri upplýsingar
-
-### Hnitakerfi:
-
-I   : x+ y+ (Áfram og til hægri)
-
-II  : x- y+ (Áfram og til vinstri)
-
-III : x- y- (Til baka og til vinstri)
-
-IIII: x+ y- (Til baka og til hægri) 
-
-ef x = 0 og y = 0 er ekki verið að hreyfa bílinn
-ef x = 0 og y = + eða - er verið að keyra áfram eða afturabak
-ef x = + eða - og y = 0 er verið að snúa bílnum í annaðhvort vinstri eða hægri án þess að færa sig
-
----
