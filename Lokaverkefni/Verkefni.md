@@ -2,6 +2,24 @@
 
 ---
 
+## Myndbönd og kóði
+1. Kóði fyrir Fjarstýringuna
+ - [Transmitter - fjarstýring](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/transmitter.ino)
+ - [Transmitter - Library.h](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.h)
+ - [Transmitter - library.cpp](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.cpp)
+1. Kóði fyrir bíllinn
+ - [Receiver - Bíll](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/Receiver/Receiver.ino)
+
+Getur hunsað library í bílnum, var ekki notað vegna tímaskertununi.
+Það er library sem ég nota í fjarstýringunna til að einfalda virkni hennar kallað Coordinates.
+
+Myndband af virkni fyrir árekstarvörn og joystick sem sýnir beygjur hraðabreytingar og fleira:
+[JOYSTICK](https://www.youtube.com/watch?v=5d1p1xOrTkY&feature=youtu.be&ab_channel=Icgxstriker)
+
+Myndband af virkni fyrir mpu6050:
+[MPU6050](https://youtu.be/6eQ2Ym2_j-E)
+
+---
 ## Tengingar
 
 ### Joystick
