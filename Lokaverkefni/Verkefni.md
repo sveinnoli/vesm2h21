@@ -2,27 +2,6 @@
 
 ---
 
-## Components
-### Motor Driver
-
-MotorA: Vinstri
-
-MotorB: Hægri
-
-### MPU 6050
-
-### Joystick
-
-### Arduino Nano
-
-### Arduino Uno
-
-### Ultrasonic Sensor
-
-
-
----
-
 ## Tengingar
 
 ### Joystick
@@ -189,7 +168,7 @@ Búði til 'Coordinate' library sem getur tekið við analog gildum og gildi sem
 Bætti við árekstrarvörn
 
 #### 10/05 - 12/05 
-Lóðaði saman fjarstýringuna.
+Lóðaði saman fjarstýringuna og náði almenilega virkni.
 
 ## Ýttri upplýsingar
 
