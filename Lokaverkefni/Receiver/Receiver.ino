@@ -25,7 +25,7 @@ uint8_t motorcontrols[4] = {};
 #define ECHO_PIN 6
 
 //Ultrasonic distance to activate crash prevention
-#define crash_distance 15  
+#define crash_distance 14
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, 400);
 float duration, distance;
@@ -100,6 +100,7 @@ void setup()
 void loop()
 {
   distance = sonar.ping_cm();
+  delay(20);
   if (distance < crash_distance) {
     crash_prevention();
   }
