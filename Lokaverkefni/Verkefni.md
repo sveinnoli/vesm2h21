@@ -14,11 +14,10 @@ Getur hunsað library í bílnum, var ekki notað vegna tímaskertununi.
 
 Það er library sem ég nota í fjarstýringunna til að einfalda virkni hennar kallað Coordinates. getur checka þær út í library.h, library.cpp linkonum
 
-Myndband af virkni fyrir árekstarvörn og joystick sem sýnir beygjur hraðabreytingar og fleira:
-[JOYSTICK](https://www.youtube.com/watch?v=5d1p1xOrTkY&feature=youtu.be&ab_channel=Icgxstriker)
 
-Myndband af virkni fyrir mpu6050:
-[MPU6050](https://youtu.be/6eQ2Ym2_j-E)
+[Myndband af virkni fyrir árekstarvörn og joystick sem sýnir beygjur hraðabreytingar og fleira](https://www.youtube.com/watch?v=5d1p1xOrTkY&feature=youtu.be&ab_channel=Icgxstriker)
+
+[Myndband af virkni fyrir mpu6050](https://youtu.be/6eQ2Ym2_j-E)
 
 ---
 ## Tengingar
