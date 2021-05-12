@@ -2,43 +2,50 @@
 
 ---
 
-## Components
-### Motor Driver
-
-MotorA: Vinstri
-
-MotorB: Hægri
-
-### MPU 6050
+## Tengingar
 
 ### Joystick
+```
+VCC  - 5V
+GND  - GND
+VRX  - A0
+VRY  - A1
+SW   - D2
+```
 
-### Arduino Nano
+### NRF24
+```
+VCC  - 5V
+GND  - GND
+CE   - D9
+CSN  - D8
+SCK  - D13
+MOSI - D11
+MISO - D12
+```
 
-### Arduino Uno
+### MPU6050
+```
+VCC - 3.3V
+GND - GND
+SCL - A5
+XDA - A4
+```
 
-### Ultrasonic Sensor
+### Motor driver
+```
+ENA - 3 
 
+IN4 - 4
 
+IN3 - 5
 
----
+IN2 - 7
 
-## Tengingar
-### Motor Driver
-!BÆTA VIÐ TÖFLU
+IN1 - 8
 
-> ENA: Purple - 3 
-> 
-> IN4: Blue - 4
-> 
-> IN3: green - 5
-> 
-> IN2: yellow - 7
-> 
-> IN1: orange - 8
-> 
-> ENB: red - 9
-
+ENB - 9
+```
 ---
 
 ## Steering
@@ -76,14 +83,26 @@ Forward er 11 minni en Back þannig það þarf að annaðhvort að breyta bæð
 Til að breyta þessum tölum yfir í prósentar einíngu fyrir max_speed notum við map() fallið t.d. map(x gildi, 0, 255, 0, max_speed)
 Þetta breytir öllum gildum yfir 0-255 yfir í 0 til hraðan sem við ákveðum sem max hraða. Þar sem joystickið er ekki með nákvæmlega 256 tölur fyrir hvern ás líklega vegna framleiðanda galla er þetta mjög þægilegt.
 
+### 2. MPU 6050
 
-### Motor Driver
+Til að nota MPU6050 til að stjórna fjarstýringu þarf að taka inn acceleration á X, Y ásinum. 
+Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -
+```
+Forward:   Y er -
+Backwards: Y er +
+Left:      X er +
+Right:     X er -
+```
+Þarf að leiðretta áttirnar þar sem MPU6050 verður að beina í serstaka átt þegar hún verður í fjarstýringunni þannig:
+```
+Forward:   X er -
+Backwards: X er +
+Right:     Y er +
+Left:      Y er -
+```
+
+### 3. Motor Driver
 Conditions for turning off motors, going forward and backwards.
-
-MotorA(Left): IN1, IN2
-
-MotorB(Right): IN3, IN4
-
 ```
 OFF:
 IN1: LOW
@@ -115,23 +134,10 @@ IN3=LOW, IN4=HIGH
 
 Það er líka hægt að hafa bæði dekkin snúa í sama átt en hafa dekkin á það hlið sem er verið að snúa í vera með mun minni PWM set í það en anstæða hliðin sem er verið að snúa í.
 
-### 2. MPU 6050
+MotorA(Left): IN1, IN2
 
-Til að nota MPU6050 til að stjórna fjarstýringu þarf að taka inn acceleration á X, Y ásinum. 
-Hérna er tafla sem heldur upp á hvaða átt er verið að snúa í eftir hvort X og Y gildi eru í + eða -
-```
-Forward:   Y er -
-Backwards: Y er +
-Left:      X er +
-Right:     X er -
-```
-Þarf að leiðretta áttirnar þar sem MPU6050 verður að beina í serstaka átt þegar hún verður í fjarstýringunni þannig:
-```
-Forward:   X er -
-Backwards: X er +
-Right:     Y er +
-Left:      Y er -
-```
+MotorB(Right): IN3, IN4
+
 ---
 
 ## Millifærsla
@@ -159,7 +165,10 @@ Náði að setja inn fulla keyrslu, áfram, vinstri, hægri og til baka með bæ
 Búði til 'Coordinate' library sem getur tekið við analog gildum og gildi sem nýta sér hnitakerfið eins og MPU6050 og breytir þeim í hraða og átt fyrir mótorina. Til að koma við hvernig joystickið og mpuið snýr þegar það er sett í fjarstýringuna gerði ég fall sem getur snúið við vígrum í 90, 180 og 270° clockwise til að koma við að það skiptir ekki máli hvernig það snýr.
 
 #### 09/05 - 10/05
-Bæti við árekstrarvörn
+Bætti við árekstrarvörn
+
+#### 10/05 - 12/05 
+Lóðaði saman fjarstýringuna og náði almenilega virkni.
 
 ## Ýttri upplýsingar
 
