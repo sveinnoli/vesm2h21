@@ -159,6 +159,9 @@ MotorB(Right): IN3, IN4
 ---
 
 ## Millifærsla
+
+Hérna er hvernig packetið sem er millifært frá transmitter yfir í receiver lítur út eins og, 
+2 og 3 gefa áttina sem er verið að snúa í og 0, 1 skila x, y gildin frá joystick/mpu6050.
 ```
 Motorcontrol[] = 
 {
