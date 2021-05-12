@@ -11,6 +11,7 @@
  - [Receiver - Bíll](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/Receiver/Receiver.ino)
 
 Getur hunsað library í bílnum, var ekki notað vegna tímaskertununi.
+
 Það er library sem ég nota í fjarstýringunna til að einfalda virkni hennar kallað Coordinates. getur checka þær út í library.h, library.cpp linkonum
 
 Myndband af virkni fyrir árekstarvörn og joystick sem sýnir beygjur hraðabreytingar og fleira:
