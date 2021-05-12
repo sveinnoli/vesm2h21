@@ -2,7 +2,7 @@
 
 ---
 
-## Myndbönd og kóði
+## Myndbönd og kóði, LEIÐ (A)
 1. Kóði fyrir Fjarstýringuna
  - [Transmitter - fjarstýring](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/transmitter.ino)
  - [Transmitter - Library.h - Coordinates](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.h)
