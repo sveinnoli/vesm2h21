@@ -7,7 +7,7 @@
  - [Transmitter - fjarstýring](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/transmitter.ino)
  - [Transmitter - Library.h](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.h)
  - [Transmitter - library.cpp](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.cpp)
-1. Kóði fyrir bíllinn
+2. Kóði fyrir bíllinn
  - [Receiver - Bíll](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/Receiver/Receiver.ino)
 
 Getur hunsað library í bílnum, var ekki notað vegna tímaskertununi.
