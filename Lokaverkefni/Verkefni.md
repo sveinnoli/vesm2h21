@@ -2,6 +2,24 @@
 
 ---
 
+## Leið A: Myndbönd og kóði
+1. Kóði fyrir Fjarstýringuna
+ - [Transmitter - fjarstýring](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/transmitter.ino)
+ - [Transmitter - Library.h - Coordinates](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.h)
+ - [Transmitter - library.cpp - Coordinates](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/transmitter/Coordinate.cpp)
+2. Kóði fyrir bíllinn
+ - [Receiver - Bíll](https://github.com/sveinnoli/vesm2h21/blob/main/Lokaverkefni/Receiver/Receiver.ino)
+
+Getur hunsað library í bílnum, var ekki notað vegna tímaskertununi.
+
+Það er library sem ég nota í fjarstýringunna til að einfalda virkni hennar kallað Coordinates. getur checka þær út í library.h, library.cpp linkonum
+
+
+[Myndband af virkni fyrir árekstarvörn og joystick sem sýnir beygjur hraðabreytingar og fleira](https://www.youtube.com/watch?v=5d1p1xOrTkY&feature=youtu.be&ab_channel=Icgxstriker)
+
+[Myndband af virkni fyrir mpu6050](https://youtu.be/6eQ2Ym2_j-E)
+
+---
 ## Tengingar
 
 ### Joystick
@@ -141,6 +159,9 @@ MotorB(Right): IN3, IN4
 ---
 
 ## Millifærsla
+
+Hérna er hvernig packetið sem er millifært frá transmitter yfir í receiver lítur út eins og, 
+2 og 3 gefa áttina sem er verið að snúa í og 0, 1 skila x, y gildin frá joystick/mpu6050.
 ```
 Motorcontrol[] = 
 {
@@ -169,21 +190,3 @@ Bætti við árekstrarvörn
 
 #### 10/05 - 12/05 
 Lóðaði saman fjarstýringuna og náði almenilega virkni.
-
-## Ýttri upplýsingar
-
-### Hnitakerfi:
-
-I   : x+ y+ (Áfram og til hægri)
-
-II  : x- y+ (Áfram og til vinstri)
-
-III : x- y- (Til baka og til vinstri)
-
-IIII: x+ y- (Til baka og til hægri) 
-
-ef x = 0 og y = 0 er ekki verið að hreyfa bílinn
-ef x = 0 og y = + eða - er verið að keyra áfram eða afturabak
-ef x = + eða - og y = 0 er verið að snúa bílnum í annaðhvort vinstri eða hægri án þess að færa sig
-
----
